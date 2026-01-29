@@ -1,6 +1,7 @@
+package ai.learning.service;
 
 // `src/main/java/com/nontrauma/migration/migrationutil/service/MemberClaimsDeleteService.java`
-package com.nontrauma.migration.migrationutil.service;
+package ai.learning.service;
 
 import com.datastax.oss.driver.api.core.servererrors.InvalidQueryException;
 import com.nontrauma.migration.migrationutil.repository.ClaimsDeleteRepo;
@@ -12,9 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @Slf4j
 @Service
@@ -23,6 +21,8 @@ public class MemberClaimsDeleteService {
     private static final int MAX_RETRIES = 3;
 
     private final ClaimsDeleteRepo claimsDeleteRepo;
+    private final List<Long> rangeDeleteLimitedMemberKeys =
+            Collections.synchronizedList(new ArrayList<>());
 
     @Autowired
     public MemberClaimsDeleteService(ClaimsDeleteRepo claimsDeleteRepo) {
@@ -30,14 +30,11 @@ public class MemberClaimsDeleteService {
     }
 
     void deleteMembers(Long payerKey, List<Long> memberKeys) {
-      memberKeys.stream().parallel()
-              .forEach(memberKey -> {
-                  deleteWithRetry(payerKey, memberKey);
-              });
+        memberKeys.stream().parallel()
+                .forEach(memberKey -> {
+                    deleteWithRetry(payerKey, memberKey);
+                });
     }
-
-    private final List<Long> rangeDeleteLimitedMemberKeys =
-            Collections.synchronizedList(new ArrayList<>());
 
     private void deleteWithRetry(Long payerKey, Long memberKey) {
         try {

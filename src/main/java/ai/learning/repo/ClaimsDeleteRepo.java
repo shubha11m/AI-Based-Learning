@@ -1,3 +1,5 @@
+package ai.learning.repo;
+
 
 package com.nontrauma.migration.migrationutil.repository;
 

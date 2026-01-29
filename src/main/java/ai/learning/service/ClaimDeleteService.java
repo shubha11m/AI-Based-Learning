@@ -1,4 +1,11 @@
- @Async
+package ai.learning.service;
+
+
+public class ClaimDeleteService {
+
+    @Autowied
+    private MemberClaimsDeleteService memberClaimsDeleteService;
+    @Async
     public void migratedClaimsDelete(Long payerkey, List<String> files) {
         log.info("Invoked migrateClaims for payerkey {} ", payerkey);
 
@@ -24,11 +31,14 @@
             this.s3Repository.processAndMoveFileFromRawBucket(file, processor, "deleted-members");
         });
     }
+
     private void executeDelete(final Long payerKey, final List<PayerMemberDTO> claims) {
         log.info("Before Execute delete invoked");
         final List<Long> memberKeys = claims.stream()
                 .map(PayerMemberDTO::getMemberKey)
                 .toList();
-        this.memberClaimsDeleteService.deleteMembers(payerKey,memberKeys);
+        this.memberClaimsDeleteService.deleteMembers(payerKey, memberKeys);
         log.info("After Execute delete invoked");
     }
+    )
+}

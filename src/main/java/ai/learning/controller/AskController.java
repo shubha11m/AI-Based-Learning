@@ -2,11 +2,9 @@ package ai.learning.controller;
 
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
 
 @RestController
 public class AskController {
@@ -18,6 +16,7 @@ public class AskController {
     }
     @GetMapping("/ai/generate")
     public String generate(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message) {
-        return  this.chatModel.call(message).toString();
-    }
+        `gbx`return  this.chatModel.call(message).toString();
+    }`
+
 }
