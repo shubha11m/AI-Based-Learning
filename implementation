@@ -1,0 +1,150 @@
+Here’s a **clean, well‑formatted, documentation‑ready version** of your flow description.  
+I’ve rewritten it for clarity, readability, and structure—no logic changed, just polished.
+
+***
+
+# **Claim Data Cleanup – High‑Level Design & Flow**
+
+## **1. Brief Approach**
+
+The cleanup logic attempts to delete all claim records for a member in Amazon Keyspaces using a **two‑stage delete strategy**:
+
+1.  **Fast path:**  
+    Perform a *partition delete*:
+    ```sql
+    DELETE ... WHERE payerKey=? AND memberKey=?
+    ```
+    If Keyspaces accepts it, deletion is complete.
+
+2.  **Fallback path:**  
+    If Keyspaces rejects the partition delete due to  
+    **“range delete requests are limited”**,  
+    then clean up using **smaller date‑window deletes** based on the leading clustering column `servicebegindate`.
+
+    The fallback strategy:
+
+    *   Iterate through date windows from **1970‑01‑01 to today+1**
+    *   Try deleting in **12‑month chunks**
+    *   If Keyspaces still rejects:
+        *   Shrink to **6 months → 3 months → 1 month**
+    *   After all windows are processed, delete duplicates using:
+        ```sql
+        DELETE ... WHERE payerKey=? AND memberKey=? (dup cleanup)
+        ```
+
+***
+
+## **2. Method Call Flow (High‑Level)**
+
+### **Controller Layer**
+
+#### `ClaimDataFixController.cleanupByMemberKey(payerKey, files)`
+
+*   Kicks off an **async job** using `TaskExecutor`
+*   Delegates to service layer:
+    ```java
+    ClaimDataFixService.migratedClaimsDelete(payerKey, files)
+    ```
+
+***
+
+### **Service Layer**
+
+#### `ClaimDataFixService.migratedClaimsDelete(payerKey, files)`
+
+For each S3 file:
+
+1.  Reads the file via  
+    `S3Repository.processAndMoveFileFromRawBucket(file, processor, "deleted-members")`
+2.  Processor converts each line → `PayerMemberDTO`
+3.  Collects all memberKeys
+4.  Calls:
+    ```java
+    RangeDeleteNTClaimService.deleteMembers(payerKey, memberKeys)
+    ```
+
+***
+
+### **Parallel Member Cleanup**
+
+#### `RangeDeleteNTClaimService.deleteMembers(payerKey, memberKeys)`
+
+*   Processes each `memberKey` **in parallel**
+*   For each member, invokes:
+    ```java
+    deleteWithFallback(payerKey, memberKey)
+    ```
+
+***
+
+## **3. Member-Level Delete Flow**
+
+### **`deleteWithFallback(payerKey, memberKey)`**
+
+1.  **Attempt fast partition delete**
+    ```java
+    claimsDeleteRepo.deleteClaimsByPayerAndMember(payerKey, memberKey)
+    ```
+    *   If **success** → **Done**
+    *   If **failure with “range delete limited”** → proceed to fallback
+
+2.  **Fallback Delete Loop**
+    *   Iterate time windows:
+        ```text
+        from 1970‑01‑01 to (today + 1 day), 1 year at a time
+        ```
+    *   For each window:
+        ```java
+        deleteRangeAdaptive(payerKey, memberKey, from, to, 12)
+        ```
+
+3.  **After windowed deletes complete**
+    *   Remove duplicates:
+        ```java
+        claimsDeleteRepo.deleteDupByPayerAndMember(payerKey, memberKey)
+        ```
+
+***
+
+## **4. Adaptive Range Delete**
+
+### **`deleteRangeAdaptive(payerKey, memberKey, from, to, monthsPerChunk)`**
+
+Executes deletes like:
+
+```sql
+DELETE ... 
+WHERE payerKey=? 
+  AND memberKey=? 
+  AND servicebegindate >= ? 
+  AND servicebegindate <  ?
+```
+
+If Amazon Keyspaces still rejects the request as exceeding range limits:
+
+*   Retry with progressively smaller chunks:
+        12 months → 6 months → 3 months → 1 month
+*   Continue until the entire window is successfully cleared.
+
+***
+
+## **5. Visual Structure (Per MemberKey)**
+
+    deleteMembers()
+     └── deleteWithFallback()
+           ├── try deleteClaimsByPayerAndMember()
+           │     └── SUCCESS → DONE
+           │     └── FAIL (range delete limited) → fallback
+           └── Loop yearly windows:
+                 └── deleteRangeAdaptive(12 months)
+                        └── If still limited → retry 6 → 3 → 1 month
+           └── deleteDupByPayerAndMember()
+
+***
+
+If you want, I can also format this into:
+
+✅ A Confluence‑ready page  
+✅ A sequence diagram (Mermaid)  
+✅ A flowchart image  
+Just tell me which format you prefer!
