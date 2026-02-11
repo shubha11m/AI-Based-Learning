@@ -1,0 +1,161 @@
+Subrontclaim-ingestion service  
+
+            The primary goal of this repo is to ingest the ntclaims file and store into keyspace and S3. 
+
+SQS Message Arrival 
+
+File processing sent a sqs message to ntclaim-sqs with details about ntclaims ingestion request) 
+
+Lambda trigger 
+
+Once message is arived then ntclaim lambda will execute  
+
+The Lambda reads the SQS message, extracts relevant information such as environment and request payload.  
+
+Task Creation 
+
+The lambda function will inisite ECS task. 
+
+Java Application Execution 
+
+The Java application (NTFileConsumer.main) is started, with command-line arguments (env, request) passed from the Lambda. 
+
+The main method parses these arguments, sets up S3 and Cassandra connections, and processes the files as described in your code. 
+
+Processing & Logging   
+
+The application reads files from S3, processes them, handles duplicates, writes results, updates stats, and cleans up. 
+
+Short Summary :-  
+
+SQS receives a message → Lambda is triggered → Lambda starts the Java ingestion job (passing SQS message data as arguments) → Java app processes the ingestion as per your code. 
+
+This pattern decouples ingestion requests (SQS) from processing (Java app), allowing for scalable, event-driven processing. 
+
+ 
+
+How the Lambda starts an ECS Fargate task and passes data to your Java app 
+
+1. Creating the ECS Client 
+
+The line ecs_client = boto3.client('ecs') creates a Python object that lets Lambda talk to AWS ECS (Elastic Container Service) using the AWS API.   
+
+2. Preparing Task Parameters 
+
+Lambda gathers all the information ECS needs to run a container:   
+
+Cluster: The ECS cluster name where the task will run. 
+
+Task Definition: The blueprint for the container (image, resources, etc.). 
+
+Network Configuration: Subnets, security groups, and VPC settings for networking. 
+
+Environment Variables: Key-value pairs (like APPLICATIONINSIGHTS_CONNECTION_STRING and REGION) that will be available inside the container. 
+
+Command: The exact command the container will run, including: 
+
+java -jar /opi/bin/subropoint-ntclaims-1.0-SNAPSHOT.jar ... 
+
+The Java class to run. 
+
+-env and -request arguments, where -request is the SQS message body. 
+
+ 
+
+3. Calling run_task 
+
+Lambda calls ecs_client.run_task(...) with all the above parameters. This tells ECS to:   
+
+Start a new Fargate task (a container in the cloud). 
+
+Use the specified Docker image and settings. 
+
+Inject the environment variables. 
+
+Run the command, passing the SQS message as an argument. 
+
+4. How Arguments Reach the Java App 
+
+The command array in the overrides tells ECS what to run inside the container. 
+
+ECS starts the container, and the entrypoint becomes: 
+
+java -jar /opi/bin/subropoint-ntclaims-1.0-SNAPSHOT.jar com.optum.subro.subropoint.ntclaims.ingestion.NTFileConsumer -env <env> -request <request_body> 
+
+The Java app’s main method receives -env and -request as command-line arguments. 
+
+Inside the app, code like args[] or a CLI parser reads these values and uses them to process the job. 
+
+5. Environment Variables in the Container 
+
+The environment variables set in Lambda are injected into the container’s environment. 
+
+The Java app can read them using System.getenv("VARIABLE_NAME"). 
+
+6. Result 
+
+The ECS task runs your Java app with the exact data from the SQS message. 
+
+The app processes the job as defined in your code. 
+
+HOW FILES 	ARE INGEST AND UPLOAD DATA INTO KEYSPACE 
+
+TYPE OF FILE  
+
+claim processing flow when adjustmentType = 2 
+
+Overview 
+
+When the IngestionRequest.claimAdjustmentType is set to 2, the system applies specialized logic for claims that may require Find & Replace (F&R) adjustment processing. This involves enhanced duplicate checking and routing certain claims to SQS for further adjustment handling. 
+
+Initialization 
+
+The system creates an instance of AdjustmentDuplicateClaimFilter. 
+
+Two sets of duplicate check columns are used:	 
+
+Primary: from ir.getCheckColumns() 
+
+Secondary: from ir.getSecondaryCheckColumns() 
+
+A SequentialDuplicateCheckDao is initialized with both sets for sequential duplicate checking.	 
+
+           Claim Ingestion 
+
+The filter method in AdjustmentDuplicateClaimFilter is called for each ClaimsDTO during ingestion. 
+
+Reject Check: 
+
+Calls isReject(claimdto). If true, the claim is filtered out (not processed further).   
+
+Logging & Normalization:  
+
+Logs claim details and calls normalizeAdjustmentIndicator(claimdto) to blank out certain adjustment indicators.		 
+
+          Duplicate Handling:  
+
+Calls handleDuplicateClaim(claimdto): 
+
+If the claim is an adjustment and adjustmentType == 2, calls sequentialDuplicateCheckDao.insertIfNotExitsSequentially(claimdto) to check for duplicates using primary and secondary checks 
+
+Call sequentialDuplicateCheckDao.insertIfNotExitsSequentially(claimdto) :- 
+
+Purpose: 
+
+ Checks for duplicates using both primary and secondary duplicate check columns. 
+
+Returns: A List<Boolean> indicating if the claim was inserted (not duplicate) for each check. 
+
+ Call sequentialDuplicateCheckDao.insertIfNotExitsSequentially(claimdto) :- 
+
+List with one element:   
+
+[true] — Claim is not a duplicate in the primary check (inserted successfully). 
+
+List with two elements (primary and secondary checks):   
+
+[false, true] — Claim is a duplicate in the primary check, but not a duplicate in the secondary check. 
+
+[false, false] — Claim is a duplicate in both primary and secondary checks. 
+
+ 
