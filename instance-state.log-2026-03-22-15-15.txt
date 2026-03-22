@@ -1,0 +1,1626 @@
+OS is AL2023: /usr/bin/ruby
+Sleeping for a random period of time up to 10 minutes
+Sleeping for 172.5716196605273 seconds
+Sun Mar 22 15:17:55 UTC 2026
+
+# how long have we been up
+uptime
+ 15:17:55 up 4 min,  0 users,  load average: 0.86, 0.87, 0.43
+
+# whats running, with ASCII-art process hierarchy (forest)
+if [ "$dumpType" == "full" ]
+then
+  ps auxwwwf
+else
+  ps auxf --width=200
+fi
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    15:12   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [netns]
+root           7  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/0:0-cgroup_release]
+root           8  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/u30:0-flush-202:16]
+root          10  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [migration/0]
+root          17  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/0:1-cgroup_free]
+root          18  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [migration/1]
+root          21  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [ksoftirqd/1]
+root          22  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/1:0-events]
+root          23  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/u30:1-flush-202:16]
+root          26  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [kdevtmpfs]
+root          27  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [inet_frag_wq]
+root          28  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [kauditd]
+root          29  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/u30:2-flush-202:16]
+root          32  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [writeback]
+root          33  0.3  0.0      0     0 ?        S    15:12   0:00  \_ [kcompactd0]
+root          34  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/1:1-cgroup_free]
+root          35  0.0  0.0      0     0 ?        SN   15:12   0:00  \_ [khugepaged]
+root          36  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [cryptd]
+root          37  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kintegrityd]
+root          38  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kblockd]
+root          39  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [blkcg_punt_bio]
+root          40  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [xen-balloon]
+root          41  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [tpm_dev_wq]
+root          42  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [md]
+root          43  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [edac-poller]
+root          44  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [watchdogd]
+root          45  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kworker/0:1H-kblockd]
+root          54  0.4  0.0      0     0 ?        S    15:12   0:01  \_ [kswapd0]
+root          56  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/u30:3-flush-202:16]
+root          85  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfsalloc]
+root          86  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs_mru_cache]
+root          89  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kthrotld]
+root          92  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/0:2-events]
+root          94  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/0:3-events]
+root         107  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [xenbus]
+root         108  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [xenwatch]
+root         148  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [nvme-wq]
+root         152  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [nvme-reset-wq]
+root         155  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [nvme-delete-wq]
+root         179  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [mld]
+root         180  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [ipv6_addrconf]
+root         195  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kstrp]
+root         205  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [zswap-shrink]
+root         206  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kworker/u31:0]
+root         351  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [kworker/1:1H-kblockd]
+root         361  0.0  0.0      0     0 ?        I    15:12   0:00  \_ [kworker/1:2-xfs-reclaim/xvda1]
+root        1056  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-buf/xvda1]
+root        1057  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-conv/xvda1]
+root        1058  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-reclaim/xvd]
+root        1059  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-blockgc/xvd]
+root        1060  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-inodegc/xvd]
+root        1061  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-log/xvda1]
+root        1062  0.0  0.0      0     0 ?        I<   15:12   0:00  \_ [xfs-cil/xvda1]
+root        1063  0.0  0.0      0     0 ?        S    15:12   0:00  \_ [xfsaild/xvda1]
+root        1699  0.0  0.0      0     0 ?        I    15:13   0:00  \_ [kworker/u30:4-flush-202:16]
+root        1790  0.0  0.0      0     0 ?        I    15:13   0:00  \_ [kworker/0:4-cgroup_bpf_destroy]
+root        1801  0.0  0.0      0     0 ?        I    15:13   0:00  \_ [kworker/1:3-xfs-buf/xvda1]
+root        1816  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [rpciod]
+root        1817  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xprtiod]
+root        1969  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [ata_sff]
+root        1982  0.0  0.0      0     0 ?        S    15:13   0:00  \_ [scsi_eh_0]
+root        1983  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [scsi_tmf_0]
+root        1986  0.0  0.0      0     0 ?        S    15:13   0:00  \_ [scsi_eh_1]
+root        1988  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [scsi_tmf_1]
+root        2008  0.0  0.0      0     0 ?        I    15:13   0:00  \_ [kworker/0:5-cgroup_release]
+root        2555  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-buf/xvdb1]
+root        2556  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-conv/xvdb1]
+root        2557  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-reclaim/xvd]
+root        2558  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-blockgc/xvd]
+root        2559  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-inodegc/xvd]
+root        2561  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-log/xvdb1]
+root        2563  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-cil/xvdb1]
+root        2564  0.0  0.0      0     0 ?        S    15:13   0:00  \_ [xfsaild/xvdb1]
+root        2628  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-buf/xvdb2]
+root        2629  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-conv/xvdb2]
+root        2630  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-reclaim/xvd]
+root        2631  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-blockgc/xvd]
+root        2633  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-inodegc/xvd]
+root        2635  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-log/xvdb2]
+root        2636  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-cil/xvdb2]
+root        2638  0.0  0.0      0     0 ?        S    15:13   0:00  \_ [xfsaild/xvdb2]
+root        2733  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-buf/xvdc]
+root        2734  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-conv/xvdc]
+root        2735  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-reclaim/xvd]
+root        2736  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-blockgc/xvd]
+root        2737  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-inodegc/xvd]
+root        2764  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-log/xvdc]
+root        2765  0.0  0.0      0     0 ?        I<   15:13   0:00  \_ [xfs-cil/xvdc]
+root        2766  0.0  0.0      0     0 ?        S    15:13   0:00  \_ [xfsaild/xvdc]
+root        4245  0.0  0.0      0     0 ?        I    15:13   0:00  \_ [kworker/u30:5-flush-202:16]
+root        4960  0.0  0.0      0     0 ?        I    15:14   0:00  \_ [kworker/u30:6-flush-202:16]
+root        4994  0.0  0.0      0     0 ?        I    15:14   0:00  \_ [kworker/u30:7-events_unbound]
+root        4995  0.0  0.0      0     0 ?        I    15:14   0:00  \_ [kworker/u30:8-events_unbound]
+root        4996  0.0  0.0      0     0 ?        I    15:14   0:00  \_ [kworker/u30:9-events_unbound]
+root        5219  0.0  0.0      0     0 ?        I    15:15   0:00  \_ [kworker/u30:10-writeback]
+root           1  1.5  0.8 173104 13828 ?        Ds   15:12   0:04 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root        1117  0.2  0.6  43816 10748 ?        Rs   15:13   0:00 /usr/lib/systemd/systemd-journald
+systemd+    1810  0.0  0.3  22624  6724 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-resolved
+root        1812  0.0  0.1  21192  2124 ?        S<sl 15:13   0:00 /sbin/auditd
+root        1838  0.0  0.4  32184  7532 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-udevd
+dbus        2018  0.0  0.1   8508  3200 ?        Ss   15:13   0:00 /usr/bin/dbus-broker-launch --scope system --audit
+dbus        2019  0.1  0.1   5520  2920 ?        S    15:13   0:00  \_ dbus-broker --log 4 --controller 9 --machine-id ec216c690f25d7bdc2daebe486b75e69 --max-bytes 536870912 --max-fds 4096 --max-matches 16384 --audit
+root        2020  0.0  0.1  16372  3268 ?        Ss   15:13   0:00 /usr/bin/systemd-inhibit --what=handle-suspend-key:handle-hibernate-key --who=noah --why=acpid instead --mode=block /usr/sbin/acpid -f
+root        2068  0.0  0.0   2692  1016 ?        S    15:13   0:00  \_ /usr/sbin/acpid -f
+root        2023  0.0  0.0  81428   872 ?        Ssl  15:13   0:00 /usr/sbin/irqbalance --foreground
+libstor+    2024  0.0  0.1   2780  1924 ?        Ss   15:13   0:00 /usr/bin/lsmd -d
+rtkit       2028  0.0  0.1 155940  2040 ?        SNsl 15:13   0:00 /usr/libexec/rtkit-daemon
+root        2032  0.0  0.2  16864  4216 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-homed
+root        2033  0.1  0.4  19592  7576 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-logind
+root        2034  0.0  0.1 531920  3396 ?        Ssl  15:13   0:00 /usr/libexec/upowerd
+systemd+    2049  0.0  0.3 236948  6292 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-networkd
+polkitd     2069  0.0  0.2 314212  4176 ?        Ssl  15:13   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=err
+root        2163  0.0  0.1 281952  2952 ?        Ssl  15:13   0:00 /usr/sbin/gssproxy -D
+root        4117  0.0  0.6 1240424 10252 ?       Ssl  15:13   0:00 /usr/bin/amazon-ssm-agent
+root        4121  0.0  0.2  14396  3784 ?        Ss   15:13   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        4128  0.0  0.1   4784  2332 ?        Ss   15:13   0:00 /usr/sbin/atd -f
+root        4134  0.0  0.1 224456  3164 ?        Ss   15:13   0:00 /usr/sbin/crond -n
+root        5181  0.0  0.1 224456  2492 ?        S    15:15   0:00  \_ /usr/sbin/CROND -n
+root        5182  0.0  0.1 222972  3016 ?        Ss   15:15   0:00      \_ /bin/sh -c timeout -s SIGKILL 2h /usr/bin/dump-instance-state full 10 > /emr/instance-state/instance-state.log-`date +%Y-%m-%d-%H-%M` 2>&1
+root        5183  0.0  0.0 221388   992 ?        S    15:15   0:00          \_ timeout -s SIGKILL 2h /usr/bin/dump-instance-state full 10
+root        5185  0.0  0.1 222972  3396 ?        S    15:15   0:00              \_ /usr/bin/bash /usr/bin/dump-instance-state full 10
+root        8198  0.0  0.1 223760  2944 ?        R    15:17   0:00                  \_ ps auxwwwf
+root        4135  0.0  0.0 221368   896 tty1     Ss+  15:13   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root        4136  0.0  0.0 221412   848 ttyS0    Ss+  15:13   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+chrony      4150  0.0  0.1  86336  2348 ?        S    15:13   0:00 /usr/sbin/chronyd -F 2
+root        4416  2.0 12.1 4294300 207720 ?      Sl   15:13   0:05 /usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -Xmx1500m -Xms300m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -cp /usr/share/aws/aws-java-sdk-v2/*:/usr/share/aws/emr/emr-log-analytics-metrics/lib/*:/home/hadoop/conf -Dlog4j.defaultInitOverride aws157.apppusher.Main
+root        4423  6.5 16.7 3824968 285772 ?      Sl   15:13   0:16 /usr/lib/jvm/jre-17/bin/java -Xmx1024m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -server -cp /usr/share/aws/emr/instance-controller/lib/*:/home/hadoop/conf:/usr/share/aws/aws-java-sdk-v2/* -Dlog4j2.configurationFile=file:/etc/logpusher/log4j2.xml -Dlog4j2.formatMsgNoLookups=true -Dlog4j2.disable.jmx=true aws157.logpusher.Main /etc/logpusher/logpusher.properties
+root        4465  0.0  0.2  16372  3492 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-userdbd
+root        4476  0.0  0.2  17124  4156 ?        S    15:13   0:00  \_ systemd-userwork: waiting...
+root        4477  0.0  0.3  16968  5380 ?        S    15:13   0:00  \_ systemd-userwork: waiting...
+root        4478  0.0  0.3  17128  5340 ?        S    15:13   0:00  \_ systemd-userwork: waiting...
+hadoop      4505  8.0 16.6 3832936 283340 ?      Sl   15:13   0:19 /usr/lib/jvm/jre-17/bin/java -Djava.security.properties=/emr/instance-controller/lib/security.properties -Xmx1024m -Djute.maxbuffer=3145728 -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -server -cp /usr/share/aws/emr/instance-controller/lib/*:/home/hadoop/conf:/usr/share/aws/aws-java-sdk-v2/* -Dlog4j2.configurationFile=file:/etc/instance-controller/log4j2.xml -Dlog4j2.formatMsgNoLookups=true -Dlog4j2.disable.jmx=true aws157.instancecontroller.Main
+root        4605  0.0  0.2 234520  4448 ?        S    15:14   0:00 sudo -u hadoop yarn app --list --appStates ALL
+hadoop      4691  1.7  4.0 2205804 68428 ?       Sl   15:14   0:04  \_ /etc/alternatives/jre/bin/java -Dproc_app -Djava.net.preferIPv4Stack=true -Dsun.net.inetaddr.ttl=30 -Dservice.libdir=/usr/lib/hadoop-yarn/./,/usr/lib/hadoop-yarn/lib,/usr/lib/hadoop-hdfs/./,/usr/lib/hadoop-hdfs/lib,/usr/lib/hadoop/./,/usr/lib/hadoop/lib -Dyarn.log.dir=/usr/lib/hadoop/logs -Dyarn.log.file=hadoop.log -Dyarn.home.dir=/usr/lib/hadoop-yarn -Dyarn.root.logger=INFO,console -Djava.library.path=/usr/lib/hadoop/lib/native -Dhadoop.log.dir=/usr/lib/hadoop/logs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,console -Dhadoop.policy.file=hadoop-policy.xml -Dhadoop.security.logger=INFO,NullAppender org.apache.hadoop.yarn.client.cli.ApplicationCLI app --list --appStates ALL
+root        4606  0.0  0.1 221820  1844 ?        S    15:14   0:00 grep application_
+root        4607  0.0  0.1 224660  1712 ?        S    15:14   0:00 awk -F\t {gsub(/^ +| +$/, "", $1);gsub(/^ +| +$/, "", $6);gsub(/^ +| +$/, "", $10); print $1 "," $6 "," $10}
+hadoop      4637  0.0  0.4  22052  7532 ?        Ss   15:14   0:00 /usr/lib/systemd/systemd --user
+hadoop      4642  0.0  0.4 174156  7100 ?        S    15:14   0:00  \_ (sd-pam)
+root        5334  0.1  1.3 1807624 23096 ?       Ssl  15:15   0:00 /usr/bin/containerd
+root        5358  0.1  2.3 1928040 40684 ?       Ssl  15:15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+root        8066  1.6  0.8  22112 14076 ?        Ss   15:17   0:00 /usr/lib/systemd/systemd --user
+root        8068  0.0  0.4 174444  7316 ?        S    15:17   0:00  \_ (sd-pam)
+
+# Top CPU users
+ps auxwww --sort -%cpu | head -20
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hadoop      4505  8.0 16.6 3832936 283340 ?      Sl   15:13   0:19 /usr/lib/jvm/jre-17/bin/java -Djava.security.properties=/emr/instance-controller/lib/security.properties -Xmx1024m -Djute.maxbuffer=3145728 -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -server -cp /usr/share/aws/emr/instance-controller/lib/*:/home/hadoop/conf:/usr/share/aws/aws-java-sdk-v2/* -Dlog4j2.configurationFile=file:/etc/instance-controller/log4j2.xml -Dlog4j2.formatMsgNoLookups=true -Dlog4j2.disable.jmx=true aws157.instancecontroller.Main
+root        4423  6.5 16.7 3824968 285772 ?      Sl   15:13   0:16 /usr/lib/jvm/jre-17/bin/java -Xmx1024m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -server -cp /usr/share/aws/emr/instance-controller/lib/*:/home/hadoop/conf:/usr/share/aws/aws-java-sdk-v2/* -Dlog4j2.configurationFile=file:/etc/logpusher/log4j2.xml -Dlog4j2.formatMsgNoLookups=true -Dlog4j2.disable.jmx=true aws157.logpusher.Main /etc/logpusher/logpusher.properties
+root        4416  2.0 12.1 4294300 207720 ?      Sl   15:13   0:05 /usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -Xmx1500m -Xms300m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -cp /usr/share/aws/aws-java-sdk-v2/*:/usr/share/aws/emr/emr-log-analytics-metrics/lib/*:/home/hadoop/conf -Dlog4j.defaultInitOverride aws157.apppusher.Main
+hadoop      4691  1.7  4.0 2205804 68428 ?       Sl   15:14   0:04 /etc/alternatives/jre/bin/java -Dproc_app -Djava.net.preferIPv4Stack=true -Dsun.net.inetaddr.ttl=30 -Dservice.libdir=/usr/lib/hadoop-yarn/./,/usr/lib/hadoop-yarn/lib,/usr/lib/hadoop-hdfs/./,/usr/lib/hadoop-hdfs/lib,/usr/lib/hadoop/./,/usr/lib/hadoop/lib -Dyarn.log.dir=/usr/lib/hadoop/logs -Dyarn.log.file=hadoop.log -Dyarn.home.dir=/usr/lib/hadoop-yarn -Dyarn.root.logger=INFO,console -Djava.library.path=/usr/lib/hadoop/lib/native -Dhadoop.log.dir=/usr/lib/hadoop/logs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,console -Dhadoop.policy.file=hadoop-policy.xml -Dhadoop.security.logger=INFO,NullAppender org.apache.hadoop.yarn.client.cli.ApplicationCLI app --list --appStates ALL
+root        8066  1.6  0.8  22112 14076 ?        Ss   15:17   0:00 /usr/lib/systemd/systemd --user
+root           1  1.5  0.8 173104 13828 ?        Ds   15:12   0:04 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root          54  0.4  0.0      0     0 ?        S    15:12   0:01 [kswapd0]
+root          33  0.3  0.0      0     0 ?        S    15:12   0:00 [kcompactd0]
+root        1117  0.2  0.6  43816 10760 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-journald
+dbus        2019  0.1  0.1   5520  2920 ?        R    15:13   0:00 dbus-broker --log 4 --controller 9 --machine-id ec216c690f25d7bdc2daebe486b75e69 --max-bytes 536870912 --max-fds 4096 --max-matches 16384 --audit
+root        2033  0.1  0.4  19592  7576 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-logind
+root        5334  0.1  1.3 1807624 23096 ?       Ssl  15:15   0:00 /usr/bin/containerd
+root        5358  0.1  2.3 1928040 40684 ?       Ssl  15:15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+root           2  0.0  0.0      0     0 ?        S    15:12   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   15:12   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   15:12   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   15:12   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   15:12   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    15:12   0:00 [kworker/0:0-cgroup_release]
+
+# Top memory users
+ps auxwww --sort -rss | head -20
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        4423  6.5 16.7 3824968 285772 ?      Sl   15:13   0:16 /usr/lib/jvm/jre-17/bin/java -Xmx1024m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -server -cp /usr/share/aws/emr/instance-controller/lib/*:/home/hadoop/conf:/usr/share/aws/aws-java-sdk-v2/* -Dlog4j2.configurationFile=file:/etc/logpusher/log4j2.xml -Dlog4j2.formatMsgNoLookups=true -Dlog4j2.disable.jmx=true aws157.logpusher.Main /etc/logpusher/logpusher.properties
+hadoop      4505  8.0 16.6 3832936 283340 ?      Sl   15:13   0:19 /usr/lib/jvm/jre-17/bin/java -Djava.security.properties=/emr/instance-controller/lib/security.properties -Xmx1024m -Djute.maxbuffer=3145728 -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -server -cp /usr/share/aws/emr/instance-controller/lib/*:/home/hadoop/conf:/usr/share/aws/aws-java-sdk-v2/* -Dlog4j2.configurationFile=file:/etc/instance-controller/log4j2.xml -Dlog4j2.formatMsgNoLookups=true -Dlog4j2.disable.jmx=true aws157.instancecontroller.Main
+root        4416  2.0 12.1 4294300 207720 ?      Sl   15:13   0:05 /usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -Xmx1500m -Xms300m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio=10 -cp /usr/share/aws/aws-java-sdk-v2/*:/usr/share/aws/emr/emr-log-analytics-metrics/lib/*:/home/hadoop/conf -Dlog4j.defaultInitOverride aws157.apppusher.Main
+hadoop      4691  1.7  4.0 2205804 68428 ?       Sl   15:14   0:04 /etc/alternatives/jre/bin/java -Dproc_app -Djava.net.preferIPv4Stack=true -Dsun.net.inetaddr.ttl=30 -Dservice.libdir=/usr/lib/hadoop-yarn/./,/usr/lib/hadoop-yarn/lib,/usr/lib/hadoop-hdfs/./,/usr/lib/hadoop-hdfs/lib,/usr/lib/hadoop/./,/usr/lib/hadoop/lib -Dyarn.log.dir=/usr/lib/hadoop/logs -Dyarn.log.file=hadoop.log -Dyarn.home.dir=/usr/lib/hadoop-yarn -Dyarn.root.logger=INFO,console -Djava.library.path=/usr/lib/hadoop/lib/native -Dhadoop.log.dir=/usr/lib/hadoop/logs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,console -Dhadoop.policy.file=hadoop-policy.xml -Dhadoop.security.logger=INFO,NullAppender org.apache.hadoop.yarn.client.cli.ApplicationCLI app --list --appStates ALL
+root        5358  0.1  2.3 1928040 40684 ?       Ssl  15:15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+root        5334  0.1  1.3 1807624 23096 ?       Ssl  15:15   0:00 /usr/bin/containerd
+root        8066  1.6  0.8  22112 14076 ?        Ss   15:17   0:00 /usr/lib/systemd/systemd --user
+root           1  1.5  0.8 173104 13828 ?        Ss   15:12   0:04 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root        1117  0.2  0.6  43816 10760 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-journald
+root        4117  0.0  0.6 1240424 10252 ?       Ssl  15:13   0:00 /usr/bin/amazon-ssm-agent
+root        2033  0.1  0.4  19592  7576 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-logind
+root        1838  0.0  0.4  32184  7532 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-udevd
+hadoop      4637  0.0  0.4  22052  7532 ?        Ss   15:14   0:00 /usr/lib/systemd/systemd --user
+root        8068  0.0  0.4 174444  7316 ?        S    15:17   0:00 (sd-pam)
+hadoop      4642  0.0  0.4 174156  7100 ?        S    15:14   0:00 (sd-pam)
+systemd+    1810  0.0  0.3  22624  6724 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-resolved
+systemd+    2049  0.0  0.3 236948  6292 ?        Ss   15:13   0:00 /usr/lib/systemd/systemd-networkd
+root        4477  0.0  0.3  16968  5380 ?        S    15:13   0:00 systemd-userwork: waiting...
+root        4478  0.0  0.3  17128  5340 ?        S    15:13   0:00 systemd-userwork: waiting...
+
+# hows the kernel looking
+dmesg | tail -n 25
+[   38.022515] XFS (xvdb1): Mounting V5 Filesystem
+[   38.086188] XFS (xvdb1): Ending clean mount
+[   38.126442] XFS (xvdb2): Mounting V5 Filesystem
+[   38.196435] XFS (xvdb2): Ending clean mount
+[   38.198517] XFS (xvdb2): Quotacheck needed: Please wait.
+[   38.241345] XFS (xvdb2): Quotacheck: Done.
+[   38.327001] XFS (xvdc): Mounting V5 Filesystem
+[   38.427074] XFS (xvdc): Ending clean mount
+[   38.430166] XFS (xvdc): Quotacheck needed: Please wait.
+[   38.463040] XFS (xvdc): Quotacheck: Done.
+[   43.253397] systemd-journald[1117]: /var/log/journal/ec216c690f25d7bdc2daebe486b75e69/system.journal: Journal file has been deleted, rotating.
+[   43.257260] systemd-journald[1117]: Failed to write entry to /var/log/journal/ec216c690f25d7bdc2daebe486b75e69/system.journal (22 items, 665 bytes), rotating before retrying: Identifier removed
+[   46.139516] zram_generator::config[4111]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[   48.466192] zram_generator::config[4283]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  138.955370] zram_generator::config[5326]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  150.066387] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[  150.073190] Bridge firewalling registered
+[  150.548325] Initializing XFRM netlink socket
+[  151.438669] zram_generator::config[5531]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  152.022625] zram_generator::config[5557]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  160.508564] zram_generator::config[6020]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  162.215187] zram_generator::config[6100]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  162.762789] zram_generator::config[6122]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  165.593305] zram_generator::config[6303]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+[  166.055526] zram_generator::config[6330]: zram0: system has too much memory (1663MB), limit is 800MB, ignoring.
+
+# dump instance controller log
+tail -n 100 /emr/instance-controller/log/instance-controller.log
+2026-03-22 15:16:21,591 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:23,242 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:26,589 INFO arpc-95: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:28,269 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:31,582 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:33,298 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:36,579 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:38,331 INFO arpc-95: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:41,579 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:43,357 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:46,583 INFO arpc-95: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:47,060 INFO healthSignalMonitor: Output from command 'sudo /usr/bin/systemctl is-active hadoop-yarn-n...': 
+2026-03-22 15:16:47,060 INFO healthSignalMonitor: sudo /usr/bin/systemctl is-active hadoop-yarn-nodemanager returned deactivating
+2026-03-22 15:16:47,061 ERROR healthSignalMonitor: Non-zero return code of 3 for command 'sudo /usr/bin/systemctl is-active hadoop-yarn-nodemanager'
+2026-03-22 15:16:47,061 INFO healthSignalMonitor: Sleeping for '30000'
+2026-03-22 15:16:48,384 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:49,420 INFO MetricsCollectorCoreTaskManager-1: Calling GetManagedResizeConfigurationForWorkerRequest RPC.
+2026-03-22 15:16:51,595 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:53,416 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:56,582 INFO arpc-95: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:16:58,441 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:01,579 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:03,465 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:04,556 INFO MetricsCollectorCoreTaskManager-1: Received GetManagedResizeConfigurationForWorkerRequest response, isManagedResizeEnabled is false.
+2026-03-22 15:17:04,557 INFO MetricsCollectorCoreTaskManager-1: Instance level metrics frequencies are not set, so we will not start MetricCollector on Core/Task Instances.
+2026-03-22 15:17:06,579 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:08,206 INFO instance-metrics-collector-3: Starting Command: [sh /usr/bin//memmet.sh null]
+2026-03-22 15:17:08,218 INFO instance-metrics-collector-3: Completed Command: [sh /usr/bin//memmet.sh null] in 11ms, exitCode: 0, hadExceptionsInExecution?: false, 
+2026-03-22 15:17:08,491 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:10,207 INFO instance-metrics-collector-4: Starting Command: [sh /usr/bin//cpumet.sh null]
+2026-03-22 15:17:11,229 INFO instance-metrics-collector-4: Completed Command: [sh /usr/bin//cpumet.sh null] in 1022ms, exitCode: 0, hadExceptionsInExecution?: false, 
+2026-03-22 15:17:11,579 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:13,515 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:14,209 INFO instance-metrics-collector-1: Starting Command: [sh /usr/bin//proc_cpu_mem.sh null]
+2026-03-22 15:17:16,407 INFO instance-metrics-collector-1: Completed Command: [sh /usr/bin//proc_cpu_mem.sh null] in 2198ms, exitCode: 0, hadExceptionsInExecution?: false, 
+2026-03-22 15:17:16,581 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:17,233 INFO healthSignalMonitor: Output from command 'sudo /usr/bin/systemctl is-active hadoop-yarn-n...': 
+2026-03-22 15:17:17,233 INFO healthSignalMonitor: sudo /usr/bin/systemctl is-active hadoop-yarn-nodemanager returned activating
+2026-03-22 15:17:17,234 ERROR healthSignalMonitor: Non-zero return code of 3 for command 'sudo /usr/bin/systemctl is-active hadoop-yarn-nodemanager'
+2026-03-22 15:17:17,234 INFO healthSignalMonitor: Sleeping for '30000'
+2026-03-22 15:17:18,560 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:19,420 INFO MetricsCollectorCoreTaskManager-1: Calling GetManagedResizeConfigurationForWorkerRequest RPC.
+2026-03-22 15:17:21,584 INFO RemoteInstanceStateUpdater: Got 2 signed policies from master
+2026-03-22 15:17:21,585 INFO RemoteInstanceStateUpdater: save policy to db: SignedPolicy SYSTEM_LOG bucket: aws157-logs-prod prefix: j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.319 PM
+2026-03-22 15:17:21,591 INFO RemoteInstanceStateUpdater: save policy to db: SignedPolicy USER_LOG bucket: aws-logs-898219459031-us-east-1 prefix: elasticmapreduce/j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.343 PM
+2026-03-22 15:17:21,594 INFO MetricsCollectorCoreTaskManager-1: Received GetManagedResizeConfigurationForWorkerRequest response, isManagedResizeEnabled is false.
+2026-03-22 15:17:21,601 INFO MetricsCollectorCoreTaskManager-1: Instance level metrics frequencies are not set, so we will not start MetricCollector on Core/Task Instances.
+2026-03-22 15:17:21,609 INFO RemoteInstanceStateUpdater: Parsing ComponentConfigurations.
+2026-03-22 15:17:21,609 INFO RemoteInstanceStateUpdater: Initializing Hadoop configurations
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: ResourceManagerHostnames already populated, updating yarn-site
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: hadoopConfDir /etc/hadoop/conf/
+2026-03-22 15:17:21,617 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: Apps installed []
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: Kerberos classification not found, it is not a Kerberos cluster.
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: It is not an external KDC cluster, not setting KerberosReadyToShutDown in common instance record.
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: Not Starting Kerberos Refresher, since its not a kerberized cluster
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: ClusterConfigurationUpdateHandler Received Managed resize Configuration as null
+2026-03-22 15:17:21,617 INFO RemoteInstanceStateUpdater: Touching heartbeat file: uplink
+2026-03-22 15:17:21,618 INFO RemoteInstanceStateUpdater: Sleeping for '60000'
+2026-03-22 15:17:23,454 INFO arpc-76: NodeProvisionCheckinMethod handle: /provisionCheckin
+2026-03-22 15:17:23,455 INFO arpc-76: servletRequest: status=FAILED, message=Failure encountered in CORE_SET., reason=UNKNOWN_ERROR, versionString=0
+2026-03-22 15:17:23,458 INFO arpc-76: Received NodeProvisionCheckin with applied version 0
+2026-03-22 15:17:23,466 INFO arpc-76: Starting Command: [sudo rm -rf /emr/configuration_snapshot/]
+2026-03-22 15:17:23,573 INFO arpc-76: Completed Command: [sudo rm -rf /emr/configuration_snapshot/] in 107ms, exitCode: 0, hadExceptionsInExecution?: false, 
+2026-03-22 15:17:23,577 INFO arpc-76: Got node provisioner log path: /var/log/provision-node/apps-phase/0/722b5af7-d458-4be3-98d5-37e87129ea38
+2026-03-22 15:17:23,610 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:23,625 INFO arpc-76: After running NodeProvisionChecker, updated failureReason=UNKNOWN_ERROR, nodeProvisionModuleErrorReason=Optional.empty
+2026-03-22 15:17:26,587 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:28,653 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:31,582 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:33,704 INFO arpc-192: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:36,577 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:38,148 INFO RemoteInstanceStateUpdater: Got 2 signed policies from master
+2026-03-22 15:17:38,148 INFO RemoteInstanceStateUpdater: save policy to db: SignedPolicy SYSTEM_LOG bucket: aws157-logs-prod prefix: j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.319 PM
+2026-03-22 15:17:38,150 INFO RemoteInstanceStateUpdater: save policy to db: SignedPolicy USER_LOG bucket: aws-logs-898219459031-us-east-1 prefix: elasticmapreduce/j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.343 PM
+2026-03-22 15:17:38,161 INFO RemoteInstanceStateUpdater: Parsing ComponentConfigurations.
+2026-03-22 15:17:38,161 INFO RemoteInstanceStateUpdater: Initializing Hadoop configurations
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: ResourceManagerHostnames already populated, updating yarn-site
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: hadoopConfDir /etc/hadoop/conf/
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: Apps installed []
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: Kerberos classification not found, it is not a Kerberos cluster.
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: It is not an external KDC cluster, not setting KerberosReadyToShutDown in common instance record.
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: Not Starting Kerberos Refresher, since its not a kerberized cluster
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: ClusterConfigurationUpdateHandler Received Managed resize Configuration as null
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: Touching heartbeat file: uplink
+2026-03-22 15:17:38,163 INFO RemoteInstanceStateUpdater: Sleeping for '60000'
+2026-03-22 15:17:38,728 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:41,579 INFO arpc-94: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:43,752 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:46,583 INFO arpc-76: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:47,754 INFO healthSignalMonitor: Output from command 'sudo /usr/bin/systemctl is-active hadoop-yarn-n...': 
+2026-03-22 15:17:47,755 INFO healthSignalMonitor: sudo /usr/bin/systemctl is-active hadoop-yarn-nodemanager returned activating
+2026-03-22 15:17:47,755 ERROR healthSignalMonitor: Non-zero return code of 3 for command 'sudo /usr/bin/systemctl is-active hadoop-yarn-nodemanager'
+2026-03-22 15:17:47,756 INFO healthSignalMonitor: Sleeping for '30000'
+2026-03-22 15:17:48,777 INFO arpc-79: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:49,420 INFO MetricsCollectorCoreTaskManager-1: Calling GetManagedResizeConfigurationForWorkerRequest RPC.
+2026-03-22 15:17:49,593 INFO MetricsCollectorCoreTaskManager-1: Received GetManagedResizeConfigurationForWorkerRequest response, isManagedResizeEnabled is false.
+2026-03-22 15:17:49,593 INFO MetricsCollectorCoreTaskManager-1: Instance level metrics frequencies are not set, so we will not start MetricCollector on Core/Task Instances.
+2026-03-22 15:17:51,578 INFO arpc-74: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+2026-03-22 15:17:53,834 INFO arpc-192: Updating local logpusher decommissioning state as a result of /getStatus rpc call before: false, after: false
+
+# dump instance controller stdout
+tail -n 100 /emr/instance-controller/log/instance-controller.out
+tail: cannot open '/emr/instance-controller/log/instance-controller.out' for reading: No such file or directory
+
+# dump log pusher log
+tail -n 100 /emr/logpusher/log/logpusher.log
+2026-03-22 15:15:08,698 INFO logspusher-2: Compressed /emr/instance-state/console.log-2026-03-22-15-13 2196:591 ratio:3.715736040609137
+2026-03-22 15:15:08,698 INFO logspusher-2: Finished compressing file console.log-2026-03-22-15-13.gz with time: 28 milliseconds
+2026-03-22 15:15:08,698 INFO logspusher-2: uploading console.log-2026-03-22-15-13.gz using putObject, file length 591
+2026-03-22 15:15:08,698 INFO logspusher-2: Logpusher uses AES-256 as encryption
+2026-03-22 15:15:08,717 INFO logspusher-8: From 0 to 9376 of /emr/apppusher/log/apppusher.log is compressed
+2026-03-22 15:15:08,718 INFO logspusher-5: From 0 to 8882 of /mnt/var/log/setup-dns/setup-dns.log is compressed
+2026-03-22 15:15:08,718 INFO logspusher-5: Compressed /mnt/var/log/setup-dns/setup-dns.log 8882:1807 ratio:4.915329275041505
+2026-03-22 15:15:08,718 INFO logspusher-5: Finished compressing file setup-dns.log.gz with time: 15 milliseconds
+2026-03-22 15:15:08,718 INFO logspusher-5: uploading setup-dns.log.gz using putObject, file length 1807
+2026-03-22 15:15:08,719 INFO logspusher-5: Logpusher uses AES-256 as encryption
+2026-03-22 15:15:08,727 INFO logspusher-3: LogFile to update, s3Path: /emr/setup-devices/setup_var_cache_dir.2026-03-22-15-13-04.log, current S3 size: null, new S3 size: 1534
+2026-03-22 15:15:08,717 INFO logspusher-8: Compressed /emr/apppusher/log/apppusher.log 9376:1342 ratio:6.986587183308495
+2026-03-22 15:15:08,734 INFO logspusher-8: Finished compressing file apppusher.log.gz with time: 65 milliseconds
+2026-03-22 15:15:08,735 INFO logspusher-8: uploading apppusher.log.gz using putObject, file length 1342
+2026-03-22 15:15:08,735 INFO logspusher-8: Logpusher uses AES-256 as encryption
+2026-03-22 15:15:08,740 INFO logspusher-3: From 0 to 2951 of /emr/instance-state/libinstance-controller.log-2026-03-22-15-13 is compressed
+2026-03-22 15:15:08,740 INFO logspusher-3: Compressed /emr/instance-state/libinstance-controller.log-2026-03-22-15-13 2951:843 ratio:3.5005931198102016
+2026-03-22 15:15:08,740 INFO logspusher-3: Finished compressing file libinstance-controller.log-2026-03-22-15-13.gz with time: 1 milliseconds
+2026-03-22 15:15:08,741 INFO logspusher-3: uploading libinstance-controller.log-2026-03-22-15-13.gz using putObject, file length 843
+2026-03-22 15:15:08,741 INFO logspusher-3: Logpusher uses AES-256 as encryption
+2026-03-22 15:15:08,751 INFO logspusher-4: LogFile to update, s3Path: /emr/setup-devices/setup_var_tmp_dir.2026-03-22-15-13-04.log, current S3 size: null, new S3 size: 662
+2026-03-22 15:15:08,761 INFO logspusher-7: LogFile to update, s3Path: /emr/setup-devices/setup_var_log_dir.2026-03-22-15-13-04.log, current S3 size: null, new S3 size: 1498
+2026-03-22 15:15:08,764 INFO logspusher-4: From 0 to 633 of /emr/setup-devices/setup_emr_metrics.2026-03-22-15-13-04.log is compressed
+2026-03-22 15:15:08,765 INFO logspusher-4: Compressed /emr/setup-devices/setup_emr_metrics.2026-03-22-15-13-04.log 633:239 ratio:2.6485355648535567
+2026-03-22 15:15:08,765 INFO logspusher-4: Finished compressing file setup_emr_metrics.2026-03-22-15-13-04.log.gz with time: 2 milliseconds
+2026-03-22 15:15:08,765 INFO logspusher-4: uploading setup_emr_metrics.2026-03-22-15-13-04.log.gz using putObject, file length 239
+2026-03-22 15:15:08,765 INFO logspusher-4: Logpusher uses AES-256 as encryption
+2026-03-22 15:15:08,783 INFO logspusher-5: LogFile to update, s3Path: /mnt/var/log/setup-dns/setup-dns.log, current S3 size: null, new S3 size: 1807
+2026-03-22 15:15:08,791 INFO logspusher-5: From 0 to 91629 of /emr/logpusher/log/logpusher.log is compressed
+2026-03-22 15:15:08,791 INFO logspusher-5: Compressed /emr/logpusher/log/logpusher.log 91738:9299 ratio:9.865361866867405
+2026-03-22 15:15:08,791 INFO logspusher-5: Finished compressing file logpusher.log.gz with time: 5 milliseconds
+2026-03-22 15:15:08,792 INFO logspusher-5: uploading logpusher.log.gz using putObject, file length 9299
+2026-03-22 15:15:08,792 INFO logspusher-5: Logpusher uses AES-256 as encryption
+2026-03-22 15:15:08,797 INFO logspusher-2: LogFile to update, s3Path: /emr/instance-state/console.log-2026-03-22-15-13, current S3 size: null, new S3 size: 591
+2026-03-22 15:15:08,802 INFO logspusher-8: LogFile to update, s3Path: /emr/apppusher/log/apppusher.log, current S3 size: null, new S3 size: 1342
+2026-03-22 15:15:08,807 INFO logspusher-9: LogFile to update, s3Path: /emr/instance-controller/log/monitor.log, current S3 size: null, new S3 size: 680
+2026-03-22 15:15:08,818 INFO logspusher-6: LogFile to update, s3Path: /emr/setup-devices/setup_tmp_dir.2026-03-22-15-13-04.log, current S3 size: null, new S3 size: 802
+2026-03-22 15:15:08,821 INFO logspusher-4: LogFile to update, s3Path: /emr/setup-devices/setup_emr_metrics.2026-03-22-15-13-04.log, current S3 size: null, new S3 size: 239
+2026-03-22 15:15:08,825 INFO logspusher-3: LogFile to update, s3Path: /emr/instance-state/libinstance-controller.log-2026-03-22-15-13, current S3 size: null, new S3 size: 843
+2026-03-22 15:15:08,855 INFO logspusher-5: LogFile to update, s3Path: /emr/logpusher/log/logpusher.log, current S3 size: null, new S3 size: 9299
+2026-03-22 15:15:08,877 INFO logspusher-1: Uploaded 19 logs:
+  prepare:   38(ms) db:  77(ms) size:       185 compress: 1.23 /emr/setup-devices/DiskEncryptor.log SYS: 2984(ms)
+  prepare:   40(ms) db:  47(ms) size:       209 compress: 1.39 /emr/setup-devices/udev.2026-03-22-15-13-14.log SYS: 2992(ms)
+  prepare:   54(ms) db:  26(ms) size:      9099 compress: 5.90 /emr/instance-controller/log/instance-controller.log SYS: 2966(ms)
+  prepare:   37(ms) db: 107(ms) size:      5413 compress: 5.07 /emr/setup-devices/setup_drives.2026-03-22-15-13-04.log SYS: 2986(ms)
+  prepare:   26(ms) db:  78(ms) size:       173 compress: 1.21 /emr/logpusher/log/logpusher.out SYS: 2983(ms)
+  prepare:   33(ms) db:  42(ms) size:       173 compress: 1.21 /emr/instance-controller/log/instance-controller.out.2026-03-22-15-13 SYS: 3011(ms)
+  prepare:   25(ms) db:  73(ms) size:      7309 compress: 7.14 /emr/setup-devices/setup_var_lib_dir.2026-03-22-15-13-04.log SYS: 2981(ms)
+  prepare:   27(ms) db:  47(ms) size:        89 compress: 1.21 /mnt/var/log/mk-tmp-on-root/mk-tmp-on-root.log SYS: 2991(ms)
+  prepare:   14(ms) db:  14(ms) size:      1534 compress: 5.69 /emr/setup-devices/setup_var_cache_dir.2026-03-22-15-13-04.log SYS:  92(ms)
+  prepare:   20(ms) db:   9(ms) size:       662 compress: 5.56 /emr/setup-devices/setup_var_tmp_dir.2026-03-22-15-13-04.log SYS:  79(ms)
+  prepare:   25(ms) db:  70(ms) size:       680 compress: 3.98 /emr/instance-controller/log/monitor.log SYS:  88(ms)
+  prepare:   21(ms) db:  29(ms) size:      1498 compress: 4.29 /emr/setup-devices/setup_var_log_dir.2026-03-22-15-13-04.log SYS:  69(ms)
+  prepare:   65(ms) db:   6(ms) size:      1342 compress: 6.99 /emr/apppusher/log/apppusher.log SYS:  64(ms)
+  prepare:   28(ms) db:  43(ms) size:       591 compress: 3.72 /emr/instance-state/console.log-2026-03-22-15-13 SYS:  57(ms)
+  prepare:   25(ms) db:   3(ms) size:       802 compress: 5.20 /emr/setup-devices/setup_tmp_dir.2026-03-22-15-13-04.log SYS: 120(ms)
+  prepare:   15(ms) db:  30(ms) size:      1807 compress: 4.92 /mnt/var/log/setup-dns/setup-dns.log SYS:  37(ms)
+  prepare:    1(ms) db:  21(ms) size:       843 compress: 3.50 /emr/instance-state/libinstance-controller.log-2026-03-22-15-13 SYS:  63(ms)
+  prepare:    1(ms) db:  13(ms) size:       239 compress: 2.65 /emr/setup-devices/setup_emr_metrics.2026-03-22-15-13-04.log SYS:  47(ms)
+  prepare:    6(ms) db:  22(ms) size:      9299 compress: 9.87 /emr/logpusher/log/logpusher.log SYS:  60(ms)
+2026-03-22 15:15:08,881 INFO logspusher-1: HibernateDb contains 1 S3Policys
+2026-03-22 15:15:08,883 INFO logspusher-1: HibernateDb contains 21 LogFiles
+2026-03-22 15:15:08,883 INFO logspusher-1: logpusher finished normal iteration (1) in (65) seconds.
+2026-03-22 15:15:08,884 INFO logspusher-1: Acquired Lock for CHECKPOINT DEFRAG
+2026-03-22 15:15:08,963 INFO logspusher-1: Defrag checkpoint Statement Finished in 79 milliseconds
+2026-03-22 15:15:33,946 INFO dsm-1: DiskSpaceManager started cycle 2
+2026-03-22 15:15:33,946 INFO dsm-1: /mnt   total  343755 MB free  341018 MB used   2737 MB (0.80 %)
+2026-03-22 15:15:33,946 INFO dsm-1: /emr   total    5056 MB free    4987 MB used     69 MB (1.36 %)
+2026-03-22 15:15:33,947 INFO dsm-1: /      total   15283 MB free    6156 MB used   9127 MB (59.72 %)
+2026-03-22 15:15:33,952 INFO dsm-1: DiskSpaceManager lastSuccessTime = 2026-03-22T15:14:33.912512238Z , lastFailTime = null
+2026-03-22 15:15:33,952 INFO dsm-1: cycle 2 disk: /mnt freeDiskSpaceMb: 341018/343755 MB freeDiskSpaceRatio:0.99
+2026-03-22 15:15:33,953 INFO dsm-1: Disk /mnt had sufficient free space, skipping directories scan for this cycle
+2026-03-22 15:15:33,954 INFO dsm-1: cycle 2 disk: /emr freeDiskSpaceMb: 4987/5056 MB freeDiskSpaceRatio:0.99
+2026-03-22 15:15:33,954 INFO dsm-1: Disk /emr had sufficient free space, skipping directories scan for this cycle
+2026-03-22 15:15:33,954 INFO dsm-1: DSM cycle finished in 8 milliseconds
+2026-03-22 15:16:03,047 INFO rpcPoller-1: Initialized configset from IC's internal rpc
+2026-03-22 15:16:03,124 INFO rpcPoller-1: update SignedPolicy SYSTEM_LOG bucket: aws157-logs-prod prefix: j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.319 PM
+2026-03-22 15:16:03,124 INFO rpcPoller-1: add SignedPolicy USER_LOG bucket: aws-logs-898219459031-us-east-1 prefix: elasticmapreduce/j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.343 PM
+2026-03-22 15:16:03,125 INFO rpcPoller-1: save policy to db: SignedPolicy SYSTEM_LOG bucket: aws157-logs-prod prefix: j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.319 PM
+2026-03-22 15:16:03,129 INFO rpcPoller-1: save policy to db: SignedPolicy USER_LOG bucket: aws-logs-898219459031-us-east-1 prefix: elasticmapreduce/j-1IEACDWXUBDIS/ expiration: 2026-03-22 04:14:11.343 PM
+2026-03-22 15:16:34,033 INFO dsm-1: DiskSpaceManager started cycle 3
+2026-03-22 15:16:34,033 INFO dsm-1: /mnt   total  343755 MB free  341017 MB used   2738 MB (0.80 %)
+2026-03-22 15:16:34,033 INFO dsm-1: /emr   total    5056 MB free    4987 MB used     69 MB (1.36 %)
+2026-03-22 15:16:34,033 INFO dsm-1: /      total   15283 MB free    6156 MB used   9127 MB (59.72 %)
+2026-03-22 15:16:34,036 INFO dsm-1: DiskSpaceManager lastSuccessTime = 2026-03-22T15:15:33.954195301Z , lastFailTime = null
+2026-03-22 15:16:34,037 INFO dsm-1: cycle 3 disk: /mnt freeDiskSpaceMb: 341017/343755 MB freeDiskSpaceRatio:0.99
+2026-03-22 15:16:34,037 INFO dsm-1: Disk /mnt had sufficient free space, skipping directories scan for this cycle
+2026-03-22 15:16:34,037 INFO dsm-1: cycle 3 disk: /emr freeDiskSpaceMb: 4987/5056 MB freeDiskSpaceRatio:0.99
+2026-03-22 15:16:34,037 INFO dsm-1: Disk /emr had sufficient free space, skipping directories scan for this cycle
+2026-03-22 15:16:34,037 INFO dsm-1: DSM cycle finished in 4 milliseconds
+2026-03-22 15:17:34,042 INFO dsm-1: DiskSpaceManager started cycle 4
+2026-03-22 15:17:34,042 INFO dsm-1: /mnt   total  343755 MB free  341017 MB used   2738 MB (0.80 %)
+2026-03-22 15:17:34,042 INFO dsm-1: /emr   total    5056 MB free    4987 MB used     69 MB (1.36 %)
+2026-03-22 15:17:34,042 INFO dsm-1: /      total   15283 MB free    6155 MB used   9128 MB (59.73 %)
+2026-03-22 15:17:34,045 INFO dsm-1: DiskSpaceManager lastSuccessTime = 2026-03-22T15:16:34.037383914Z , lastFailTime = null
+2026-03-22 15:17:34,046 INFO dsm-1: cycle 4 disk: /mnt freeDiskSpaceMb: 341017/343755 MB freeDiskSpaceRatio:0.99
+2026-03-22 15:17:34,046 INFO dsm-1: Disk /mnt had sufficient free space, skipping directories scan for this cycle
+2026-03-22 15:17:34,046 INFO dsm-1: cycle 4 disk: /emr freeDiskSpaceMb: 4987/5056 MB freeDiskSpaceRatio:0.99
+2026-03-22 15:17:34,046 INFO dsm-1: Disk /emr had sufficient free space, skipping directories scan for this cycle
+2026-03-22 15:17:34,046 INFO dsm-1: DSM cycle finished in 4 milliseconds
+
+# dump log pusher stdout
+tail -n 100 /emr/logpusher/log/logpusher.out
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+if [ "$dumpType" == "full" ]; then 
+  echo "Kicking off a dump-jstack run in the background."
+  timeout -s SIGKILL 2h /usr/bin/dump-jstack > /emr/instance-state/jstack.log-`date +\%Y-\%m-\%d-\%H-\%M` 2>&1 &
+fi
+Kicking off a dump-jstack run in the background.
+
+# dump service nanny log
+tail -n 20 /emr/service-nanny/log/service-nanny-`date +%Y-%m-%d`
+tail: cannot open '/emr/service-nanny/log/service-nanny-2026-03-22' for reading: No such file or directory
+
+# dump mysql process list
+mysqladmin -u root processlist | awk -F'|' '{print $6, $7, $8, $9}' | grep -v '^\s*$'
+mysqladmin: connect to server at 'localhost' failed
+error: 'Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2)'
+Check that mariadbd is running and that the socket: '/var/lib/mysql/mysql.sock' exists!
+
+# Can we contact dom0?
+curl --connect-timeout 2 -q -f --retry 5 -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 1" >/dev/null
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0100    56 100    56   0     0 24326     0  --:--:-- --:--:-- --:--:-- 28000
+
+# Can we access master?
+set +o verbose
+PING 10.0.8.105 (10.0.8.105) 56(84) bytes of data.
+64 bytes from 10.0.8.105: icmp_seq=1 ttl=127 time=0.289 ms
+64 bytes from 10.0.8.105: icmp_seq=2 ttl=127 time=0.285 ms
+
+--- 10.0.8.105 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1067ms
+rtt min/avg/max/mdev = 0.285/0.287/0.289/0.002 ms
+
+traceroute to 10.0.8.105 (10.0.8.105), 10 hops max, 60 byte packets
+ 1  10.0.8.105  0.277 ms  0.206 ms  0.203 ms
+
+
+# Can we access the outside world?
+curl -s -I --connect-timeout 1 --max-time 5 http://elasticmapreduce.s3.amazonaws.com | head
+HTTP/1.1 200 OK
+x-amz-id-2: xTGp7UMY7NEYe/VI8uFyasz9etjEAsUhQdcfw4O+Z2Whp7dwgbXSN+SsyCQDNBxrOYpUyCsKPeRT/ZGNNGImhW4AVhH9nwp7
+x-amz-request-id: K8870MJZZM21TS19
+Date: Sun, 22 Mar 2026 15:17:57 GMT
+x-amz-bucket-region: us-east-1
+x-amz-access-point-alias: false
+x-amz-bucket-arn: arn:aws:s3:::elasticmapreduce
+Content-Type: application/xml
+Transfer-Encoding: chunked
+Server: AmazonS3
+
+# Now traceroute it
+traceroute -T --sport=17241 -p 443 -w 3 -n -m 10 elasticmapreduce.s3.amazonaws.com
+traceroute to elasticmapreduce.s3.amazonaws.com (16.15.252.33), 10 hops max, 60 byte packets
+ 1  * * *
+ 2  16.15.252.33  0.853 ms  0.781 ms  0.817 ms
+
+# listing of last logged in users
+last -w -n 25
+reboot   system boot  6.1.163-186.299.amzn2023.x86_64 Sun Mar 22 15:13   still running
+
+wtmp begins Sun Mar 22 15:13:00 2026
+
+# whats io usage look like
+iostat -x 1 5
+Linux 6.1.163-186.299.amzn2023.x86_64 (ip-10-0-5-82.ec2.internal) 	03/22/26 	_x86_64_	(2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          25.82    0.00    5.75   13.01    0.94   54.49
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+xvda           135.84   3963.26     0.10   0.07    1.90    29.18    2.92    106.23     0.52  15.20    2.63    36.41    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.27  17.56
+xvdb            14.10    593.75     0.12   0.85    1.85    42.12   21.08   2154.26     4.87  18.77   56.73   102.21    0.00      0.00     0.00   0.00    0.00     0.00    1.39   10.17    1.24  11.22
+xvdc             0.88     14.82     0.05   4.93    2.81    16.89    1.16    221.85     0.09   7.49   10.61   190.77    0.00      0.00     0.00   0.00    0.00     0.00    0.05    2.14    0.01   0.42
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           5.05    0.00    0.51    0.00    0.00   94.44
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+xvda             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+xvdb             0.00      0.00     0.00   0.00    0.00     0.00    3.00     10.00     0.00   0.00    0.33     3.33    0.00      0.00     0.00   0.00    0.00     0.00    2.00    0.50    0.00   0.00
+xvdc             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          13.93    0.00    3.98    0.00    0.50   81.59
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+xvda             0.00      0.00     0.00   0.00    0.00     0.00    1.00      8.00     1.00  50.00    0.00     8.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+xvdb             1.00      4.00     0.00   0.00    7.00     4.00   27.00    349.50    17.00  38.64    8.81    12.94    0.00      0.00     0.00   0.00    0.00     0.00    5.00   20.80    0.35   6.00
+xvdc             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          38.89    0.00    6.57    0.00    0.00   54.55
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+xvda             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+xvdb             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+xvdc             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.50    0.00    0.00   99.50
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+xvda             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+xvdb             0.00      0.00     0.00   0.00    0.00     0.00   11.00    110.00     0.00   0.00    0.45    10.00    0.00      0.00     0.00   0.00    0.00     0.00    2.00    1.00    0.01   0.00
+xvdc             0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+
+# whats memory usage look like
+free -m
+               total        used        free      shared  buff/cache   available
+Mem:            1663         983         446           4         233         474
+Swap:              0           0           0
+
+# trend memory
+vmstat 1 5
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 457568    552 238960    0    0  2257  1226  655  801 26  6 55 13  1
+ 0  0      0 456812    552 239024    0    0     0     0  264  469  1  0 99  0  0
+ 0  0      0 456812    552 239024    0    0     0     6  301  569  1  0 99  0  0
+ 0  0      0 456812    552 239024    0    0     0    40  211  399  0  0 99  0  0
+ 0  0      0 430372    552 239024    0    0     0     0  323  546  2  2 97  0  0
+
+# amount of disk free
+df -lh
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           832M     0  832M   0% /dev/shm
+tmpfs           333M  4.7M  329M   2% /run
+/dev/xvda1       15G  9.0G  6.1G  60% /
+/dev/xvda128     10M  1.3M  8.7M  13% /boot/efi
+/dev/xvdb1      5.0G   69M  4.9G   2% /emr
+/dev/xvdb2      336G  2.7G  334G   1% /mnt
+/dev/xvdc       890M   39M  852M   5% /mnt1
+tmpfs           167M  4.0K  167M   1% /run/user/990
+
+# amount of inode free
+df -ilh
+Filesystem     Inodes IUsed IFree IUse% Mounted on
+devtmpfs         205K   341  205K    1% /dev
+tmpfs            208K     1  208K    1% /dev/shm
+tmpfs            800K   636  800K    1% /run
+/dev/xvda1       7.5M  127K  7.4M    2% /
+/dev/xvda128        0     0     0     - /boot/efi
+/dev/xvdb1       2.5M    74  2.5M    1% /emr
+/dev/xvdb2       168M  2.6K  168M    1% /mnt
+/dev/xvdc        477K     9  477K    1% /mnt1
+tmpfs             42K    22   42K    1% /run/user/990
+
+set +o verbose
+
+# Top 10 largest files and folders including not subdirectories in /mnt/
+du -hsx /mnt/* | sort -rh | head -10
+308M	/mnt/var
+224K	/mnt/tmp
+0	/mnt/yarn
+0	/mnt/s3
+0	/mnt/hdfs
+
+# Top 10 largest files and folders in /mnt/var/*
+du -hsx /mnt/var/* | sort -rh | head -10
+225M	/mnt/var/cache
+66M	/mnt/var/lib
+18M	/mnt/var/log
+4.0K	/mnt/var/tmp
+0	/mnt/var/run
+0	/mnt/var/em
+
+# Top 20 largest files and folders including subdirectories in /mnt/var/log
+du -hx /mnt/var/log | sort -rh | head -20
+18M	/mnt/var/log
+16M	/mnt/var/log/journal/ec216c690f25d7bdc2daebe486b75e69
+16M	/mnt/var/log/journal
+736K	/mnt/var/log/provision-node
+532K	/mnt/var/log/provision-node/reports/0/722b5af7-d458-4be3-98d5-37e87129ea38/core_set/ip-10-0-5-82.ec2.internal
+532K	/mnt/var/log/provision-node/reports/0/722b5af7-d458-4be3-98d5-37e87129ea38/core_set
+532K	/mnt/var/log/provision-node/reports/0/722b5af7-d458-4be3-98d5-37e87129ea38
+532K	/mnt/var/log/provision-node/reports/0
+532K	/mnt/var/log/provision-node/reports
+196K	/mnt/var/log/provision-node/apps-phase/0/722b5af7-d458-4be3-98d5-37e87129ea38
+196K	/mnt/var/log/provision-node/apps-phase/0
+196K	/mnt/var/log/provision-node/apps-phase
+104K	/mnt/var/log/tmp/logpusher
+104K	/mnt/var/log/tmp
+96K	/mnt/var/log/tmp/logpusher/emr
+88K	/mnt/var/log/hadoop-yarn
+48K	/mnt/var/log/tmp/logpusher/emr/setup-devices
+28K	/mnt/var/log/hadoop-hdfs
+20K	/mnt/var/log/tmp/logpusher/emr/instance-controller/log
+20K	/mnt/var/log/tmp/logpusher/emr/instance-controller
+
+# List the entire /emr/ partition in a human readable format
+# Skip listing LogConfigOverrides under /emr/logpusher-user-overrides and
+# /emr/logpusher-system-overrides because there can be many configs which
+# inflates the size of instance-state logs.
+ls -lhR /emr/ | grep -vE "s-[a-zA-Z0-9]+\.config|application_[0-9]+_[0-9]+\.config"
+/emr/:
+total 4.0K
+drwx------. 6 hadoop hadoop   53 Mar 22 15:13 apppusher
+drwxr-x---. 6 hadoop hadoop   49 Mar 22 15:13 instance-controller
+drwxr-x---. 2 hadoop hadoop  171 Mar 22 15:17 instance-state
+drwx------. 6 root   root     49 Mar 22 15:13 logpusher
+drwxr-xr-x. 2 hadoop hadoop    6 Mar 22 15:13 logpusher-system-overrides
+drwxr-xr-x. 2 hadoop hadoop    6 Mar 22 15:13 logpusher-user-overrides
+drwxr-xr-x. 2 root   root   4.0K Mar 22 15:13 setup-devices
+
+/emr/apppusher:
+total 0
+drwx------. 2 hadoop hadoop  6 Mar 22 15:13 data
+drwx------. 2 hadoop hadoop  6 Mar 22 15:13 local
+drwx------. 2 hadoop hadoop 48 Mar 22 15:13 log
+drwx------. 2 hadoop hadoop 27 Mar 22 15:13 run
+
+/emr/apppusher/data:
+total 0
+
+/emr/apppusher/local:
+total 0
+
+/emr/apppusher/log:
+total 12K
+-rw-------. 1 root root 11K Mar 22 15:17 apppusher.log
+-rw-------. 1 root root   0 Mar 22 15:13 apppusher.out
+
+/emr/apppusher/run:
+total 4.0K
+-rw-------. 1 root root 5 Mar 22 15:13 apppusher.pid
+
+/emr/instance-controller:
+total 0
+drwxr-xr-x. 3 hadoop hadoop 113 Mar 22 15:14 db
+drwxr-xr-x. 4 hadoop hadoop 115 Mar 22 15:14 lib
+drwxr-xr-x. 3 hadoop hadoop 129 Mar 22 15:13 log
+drwxr-xr-x. 3 hadoop hadoop  75 Mar 22 15:14 run
+
+/emr/instance-controller/db:
+total 148K
+-rw-r--r--. 1 hadoop hadoop  32K Mar 22 15:14 data.data
+-rw-r--r--. 1 hadoop hadoop   16 Mar 22 15:18 data.lck
+-rw-r--r--. 1 hadoop hadoop  66K Mar 22 15:18 data.log
+-rw-r--r--. 1 hadoop hadoop  100 Mar 22 15:14 data.properties
+-rw-r--r--. 1 hadoop hadoop 1.7K Mar 22 15:14 data.script
+drwxr-xr-x. 2 hadoop hadoop    6 Mar 22 15:14 data.tmp
+
+/emr/instance-controller/db/data.tmp:
+total 0
+
+/emr/instance-controller/lib:
+total 8.0K
+-rw-r--r--. 1 hadoop hadoop   0 Mar 22 15:13 dfs.hosts.exclude
+drwxr-xr-x. 2 hadoop hadoop 104 Mar 22 15:16 info
+-rw-r--r--. 1 hadoop hadoop  30 Mar 22 15:13 security.properties
+drwxr-xr-x. 2 hadoop hadoop  87 Mar 22 15:14 sslKeys
+-rw-r--r--. 1 hadoop hadoop  49 Mar 22 15:13 yarn.nodes.exclude.xml
+
+/emr/instance-controller/lib/info:
+total 40K
+-rw-r--r--. 1 root   root   3.2K Mar 22 15:13 extraInstanceData.json
+-rw-r--r--. 1 hadoop hadoop   63 Mar 22 15:14 instance.json
+-rw-r--r--. 1 hadoop hadoop  26K Mar 22 15:16 job-flow-state.txt
+-rw-r--r--. 1 hadoop hadoop  992 Mar 22 15:16 job-flow.json
+
+/emr/instance-controller/lib/sslKeys:
+total 12K
+-rw-------. 1 hadoop hadoop 1.2K Mar 22 15:14 ic_external_trust_store
+-rw-------. 1 hadoop hadoop  579 Mar 22 15:14 ic_internal_trust_store
+-rw-------. 1 hadoop hadoop 1.5K Mar 22 15:14 ic_keystore
+
+/emr/instance-controller/log:
+total 96K
+drwxr-xr-x. 2 hadoop hadoop  24 Mar 22 15:13 bootstrap-actions
+-rw-r--r--. 1 hadoop hadoop 80K Mar 22 15:18 instance-controller.log
+-rw-r--r--. 1 hadoop hadoop 210 Mar 22 15:14 instance-controller.out.2026-03-22-15-13
+-rw-r--r--. 1 hadoop hadoop 12K Mar 22 15:18 monitor.log
+
+/emr/instance-controller/log/bootstrap-actions:
+total 0
+-rw-r--r--. 1 hadoop hadoop 0 Mar 22 15:13 master.log
+
+/emr/instance-controller/run:
+total 4.0K
+-rw-r--r--. 1 hadoop hadoop  0 Mar 22 15:14 cwmetrics.ckp
+drwxr-xr-x. 2 hadoop hadoop 20 Mar 22 15:14 heartbeat
+-rw-r--r--. 1 hadoop hadoop  4 Mar 22 15:13 instance-controller.pid
+
+/emr/instance-controller/run/heartbeat:
+total 0
+-rw-r--r--. 1 hadoop hadoop 0 Mar 22 15:17 uplink
+
+/emr/instance-state:
+total 160K
+-rw-r--r--. 1 hadoop hadoop 2.2K Mar 22 15:13 console.log-2026-03-22-15-13
+-rw-r--r--. 1 root   root    63K Mar 22 15:18 instance-state.log-2026-03-22-15-15
+-rw-r--r--. 1 root   root    85K Mar 22 15:17 jstack.log-2026-03-22-15-17
+-rw-r--r--. 1 hadoop hadoop 2.9K Mar 22 15:13 libinstance-controller.log-2026-03-22-15-13
+
+/emr/logpusher:
+total 0
+drwxr-xr-x. 3 root root 113 Mar 22 15:15 db
+drwxr-xr-x. 2 root root   6 Mar 22 15:13 lib
+drwxr-xr-x. 2 root root  48 Mar 22 15:13 log
+drwxr-xr-x. 2 root root  27 Mar 22 15:13 run
+
+/emr/logpusher/db:
+total 24K
+-rw-r--r--. 1 root root 8.0K Mar 22 15:15 data.data
+-rw-r--r--. 1 root root   16 Mar 22 15:18 data.lck
+-rw-r--r--. 1 root root 2.9K Mar 22 15:17 data.log
+-rw-r--r--. 1 root root  102 Mar 22 15:15 data.properties
+-rw-r--r--. 1 root root 2.6K Mar 22 15:15 data.script
+drwxr-xr-x. 2 root root    6 Mar 22 15:13 data.tmp
+
+/emr/logpusher/db/data.tmp:
+total 0
+
+/emr/logpusher/lib:
+total 0
+
+/emr/logpusher/log:
+total 104K
+-rw-r--r--. 1 root root 98K Mar 22 15:17 logpusher.log
+-rw-r--r--. 1 root root 210 Mar 22 15:14 logpusher.out
+
+/emr/logpusher/run:
+total 4.0K
+-rw-r--r--. 1 root root 4 Mar 22 15:13 logpusher.pid
+
+/emr/logpusher-system-overrides:
+total 0
+
+/emr/logpusher-user-overrides:
+total 0
+
+/emr/setup-devices:
+total 124K
+-rw-r--r--. 1 root root  228 Mar 22 15:13 DiskEncryptor.log
+-rw-r--r--. 1 root root  27K Mar 22 15:13 setup_drives.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root  633 Mar 22 15:13 setup_emr_metrics.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root 4.1K Mar 22 15:13 setup_tmp_dir.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root 8.6K Mar 22 15:13 setup_var_cache_dir.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root  51K Mar 22 15:13 setup_var_lib_dir.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root 6.3K Mar 22 15:13 setup_var_log_dir.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root 3.6K Mar 22 15:13 setup_var_tmp_dir.2026-03-22-15-13-04.log
+-rw-r--r--. 1 root root  291 Mar 22 15:13 udev.2026-03-22-15-13-14.log
+
+set -x
+
+# list all deleted but open files
+mounts=$(lsblk -o MOUNTPOINT | grep -v "^$" | grep -v "MOUNTPOINT")
+++ lsblk -o MOUNTPOINT
+++ grep -v MOUNTPOINT
+++ grep -v '^$'
++ mounts='/
+/emr
+/mnt
+/mnt1
+/boot/efi'
+echo $mounts | while read -r mount; do
+  lsof $mount | grep deleted
+done
++ echo / /emr /mnt /mnt1 /boot/efi
++ read -r mount
++ lsof / /emr /mnt /mnt1 /boot/efi
++ grep deleted
+systemd-j 1117            root   22u   REG  202,1   8388608    475805 /var/log.old/journal/ec216c690f25d7bdc2daebe486b75e69/system.journal (deleted)
+auditd    1812            root    5w   REG  202,1    330306    964189 /var/log.old/audit/audit.log (deleted)
++ read -r mount
+
+set +x
++ set +x
+
+# DNS Resolution Details
+cat /etc/nsswitch.conf | grep 'hosts:';
+hosts:      files dns myhostname
+
+cat /etc/resolv.conf;
+# This is /run/systemd/resolve/resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients directly to
+# all known uplink DNS servers. This file lists all configured search domains.
+#
+# Third party programs should typically not access this file directly, but only
+# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+# different way, replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 10.0.0.2
+search ec2.internal
+
+cat /etc/hosts;
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost6 localhost6.localdomain6
+
+hostname -f
+ip-10-0-5-82.ec2.internal
+
+HOSTNAME=$(hostname -f);
+
+(time dig $(hostname -f) +noadditional +noquestion +nocomments +noclass +nocmd) |& grep -v cmd | grep -v -e '^$'
+ip-10-0-5-82.ec2.internal. 41	A	10.0.5.82
+;; Query time: 0 msec
+;; SERVER: 10.0.0.2#53(10.0.0.2) (UDP)
+;; WHEN: Sun Mar 22 15:18:14 UTC 2026
+;; MSG SIZE  rcvd: 70
+real	0m0.089s
+user	0m0.002s
+sys	0m0.019s
+
+(time getent hosts $HOSTNAME) |& grep -v -e '^$';
+fe80::10fd:f6ff:fe90:c39 ip-10-0-5-82.ec2.internal
+real	0m0.006s
+user	0m0.002s
+sys	0m0.000s
+
+MYIP=$(getent hosts $HOSTNAME | cut -d ' ' -f 1);
+
+(time dig -x $MYIP +noadditional +noquestion +nocomments +noclass +nocmd) |& grep -v cmd | grep -v -e '^$'
+8.e.f.ip6.arpa.		10771	SOA	localhost. nobody.invalid. 1 3600 1200 604800 10800
+;; Query time: 0 msec
+;; SERVER: 10.0.0.2#53(10.0.0.2) (UDP)
+;; WHEN: Sun Mar 22 15:18:14 UTC 2026
+;; MSG SIZE  rcvd: 174
+real	0m0.026s
+user	0m0.008s
+sys	0m0.008s
+
+(time getent hosts $MYIP) |& grep -v -e '^$';
+fe80::10fd:f6ff:fe90:c39 ip-10-0-5-82.ec2.internal
+real	0m0.002s
+user	0m0.002s
+sys	0m0.000s
+
+# dump network statistics
+netstat -s -e
+Ip:
+    Forwarding: 1
+    22883 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    22879 incoming packets delivered
+    7968 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed
+    ICMP input histogram:
+        destination unreachable: 3
+        echo replies: 2
+    5 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        destination unreachable: 3
+        echo requests: 2
+IcmpMsg:
+        InType0: 2
+        InType3: 3
+        OutType3: 3
+        OutType8: 2
+Tcp:
+    373 active connection openings
+    35 passive connection openings
+    127 failed connection attempts
+    2 connection resets received
+    6 connections established
+    22620 segments received
+    7689 segments sent out
+    72 segments retransmitted
+    0 bad segments received
+    211 resets sent
+Udp:
+    251 packets received
+    3 packets to unknown port received
+    0 packet receive errors
+    255 packets sent
+    0 receive buffer errors
+    0 send buffer errors
+UdpLite:
+TcpExt:
+    1143 packets pruned from receive queue because of socket buffer overrun
+    43 TCP sockets finished time wait in fast timer
+    43 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 6 times
+    55 packet headers predicted
+    567 acknowledgments not containing data payload received
+    151 predicted acknowledgments
+    TCPLostRetransmit: 56
+    TCPTimeouts: 64
+    TCPLossProbes: 8
+    TCPBacklogCoalesce: 1
+    TCPDSACKOldSent: 6
+    29 connections reset due to unexpected data
+    2 connections reset due to early user close
+    TCPRcvCoalesce: 240
+    TCPOFOQueue: 1189
+    TCPAutoCorking: 3
+    TCPFromZeroWindowAdv: 60
+    TCPToZeroWindowAdv: 60
+    TCPWantZeroWindowAdv: 679
+    TCPOrigDataSent: 917
+    TCPKeepAlive: 5
+    TCPDelivered: 1120
+    TCPAckCompressed: 736
+    TcpTimeoutRehash: 64
+IpExt:
+    OutMcastPkts: 4
+    InOctets: 102656790
+    OutOctets: 751896
+    OutMcastOctets: 160
+    InNoECTPkts: 53087
+MPTcpExt:
+
+# dump instance metrics
+if [ "$dumpType" == "full" ]
+then
+  mon-tool --local_metrics
+fi
+{
+  "Customer-Memory-Top10": {
+    "name": "Customer-Memory-Top10",
+    "value": 29.9,
+    "unit": "Percent",
+    "time": 1774192696422,
+    "subMetrics": [
+      {
+        "name": "/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java -Xmx1500m -Xms300m -XX:+ExitOnOutOfMemoryError -XX:MinHeapFreeRatio\u003d10 -cp /usr/share/aws/aws-java-sdk-v2/*:/usr/share/aws/emr/emr-log-analytics-metrics/lib/*:/home/hadoop/conf -Dlog4j.defaultInitOverride aws157.apppusher.Main-Memory",
+        "value": 12.4,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "java-Memory",
+        "value": 6.8,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/etc/alternatives/jre/bin/java -Dproc_app -Djava.net.preferIPv4Stack\u003dtrue -Dsun.net.inetaddr.ttl\u003d30 -Dservice.libdir\u003d/usr/lib/hadoop-yarn/./,/usr/lib/hadoop-yarn/lib,/usr/lib/hadoop-hdfs/./,/usr/lib/hadoop-hdfs/lib,/usr/lib/hadoop/./,/usr/lib/hadoop/lib -Dyarn.log.dir\u003d/usr/lib/hadoop/logs -Dyarn.log.file\u003dhadoop.log -Dyarn.home.dir\u003d/usr/lib/hadoop-yarn -Dyarn.root.logger\u003dINFO,console -Djava.library.path\u003d/usr/lib/hadoop/lib/native -Dhadoop.log.dir\u003d/usr/lib/hadoop/logs -Dhadoop.log.file\u003dhadoop.log -Dhadoop.home.dir\u003d/usr/lib/hadoop -Dhadoop.id.str\u003dhadoop -Dhadoop.root.logger\u003dINFO,console -Dhadoop.policy.file\u003dhadoop-policy.xml -Dhadoop.security.logger\u003dINFO,NullAppender org.apache.hadoop.yarn.client.cli.ApplicationCLI app --list --appStates ALL-Memory",
+        "value": 4.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/bin/dockerd -H fd:// --containerd\u003d/run/containerd/containerd.sock --default-ulimit nofile\u003d32768:65536-Memory",
+        "value": 2.4,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/bin/containerd-Memory",
+        "value": 1.4,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/lib/systemd/systemd --switched-root --system --deserialize\u003d32-Memory",
+        "value": 0.8,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/lib/systemd/systemd-journald-Memory",
+        "value": 0.6,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/bin/amazon-ssm-agent-Memory",
+        "value": 0.6,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "systemd+-Memory",
+        "value": 0.5,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/lib/systemd/systemd-resolved-Memory",
+        "value": 0.4,
+        "unit": "Percent",
+        "time": 1774192696421
+      }
+    ]
+  },
+  "Instance-CPU-IOWait": {
+    "name": "Instance-CPU-IOWait",
+    "value": 0.0,
+    "unit": "Percent",
+    "time": 1774192691215
+  },
+  "EMR-Memory": {
+    "name": "EMR-Memory",
+    "value": 33.5,
+    "unit": "Percent",
+    "time": 1774192696422
+  },
+  "Instance-Memory-MemUtilization": {
+    "name": "Instance-Memory-MemUtilization",
+    "value": 74.1165,
+    "unit": "Percentage",
+    "time": 1774192688244
+  },
+  "InstanceController-Memory": {
+    "name": "InstanceController-Memory",
+    "value": 16.7,
+    "unit": "Percent",
+    "time": 1774192696421
+  },
+  "LogPusher-CPU": {
+    "name": "LogPusher-CPU",
+    "value": 0.0,
+    "unit": "Percent",
+    "time": 1774192696421
+  },
+  "Instance-Disk-Used-/run/user/0": {
+    "name": "Instance-Disk-Used-/run/user/0",
+    "value": 1.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/run/user/0",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Disk-Used-/mnt": {
+    "name": "Instance-Disk-Used-/mnt",
+    "value": 1.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/mnt/var/cache/dnf/amazonlinux-6d07f88cfac75807/repodata",
+        "value": 56.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/lib/rpm",
+        "value": 40.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/cache/dnf",
+        "value": 20.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/log/journal/ec216c690f25d7bdc2daebe486b75e69",
+        "value": 16.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/lib/dnf",
+        "value": 5.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/cache/dnf/emr_apps-24e6613fc9de3493/repodata",
+        "value": 5.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/lib/texmf/web2c/luatex",
+        "value": 3.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/cache/man",
+        "value": 3.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/tmp",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/mnt/var/log/setup-dns",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Disk-Used-/dev/shm": {
+    "name": "Instance-Disk-Used-/dev/shm",
+    "value": 0.0,
+    "unit": "Percent",
+    "time": 1774192463541
+  },
+  "InstanceController-RunTime": {
+    "name": "InstanceController-RunTime",
+    "value": 266.0,
+    "unit": "Second",
+    "time": 1774192696421
+  },
+  "LogPusher-Reboots": {
+    "name": "LogPusher-Reboots",
+    "value": 0.0,
+    "unit": "Count",
+    "time": 1774192456539
+  },
+  "Customer-CPU": {
+    "name": "Customer-CPU",
+    "value": 49.8,
+    "unit": "Percent",
+    "time": 1774192696422
+  },
+  "Instance-Disk-Used-/mnt1": {
+    "name": "Instance-Disk-Used-/mnt1",
+    "value": 5.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/mnt1",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Disk-Used-/boot/efi": {
+    "name": "Instance-Disk-Used-/boot/efi",
+    "value": 13.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/boot/efi",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Disk-Used-/emr": {
+    "name": "Instance-Disk-Used-/emr",
+    "value": 2.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/emr/setup-devices",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-state",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-controller/run",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-controller/log",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-controller/lib/sslKeys",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-controller/lib/info",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-controller/lib",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/instance-controller/db",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/apppusher/run",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/emr/apppusher/log",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "InstanceController-CPU": {
+    "name": "InstanceController-CPU",
+    "value": 0.5,
+    "unit": "Percent",
+    "time": 1774192696421
+  },
+  "LogPusher-Memory": {
+    "name": "LogPusher-Memory",
+    "value": 16.8,
+    "unit": "Percent",
+    "time": 1774192696421
+  },
+  "Customer-CPU-Top10": {
+    "name": "Customer-CPU-Top10",
+    "value": 49.8,
+    "unit": "Percent",
+    "time": 1774192696422,
+    "subMetrics": [
+      {
+        "name": "java-CPU",
+        "value": 43.3,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "systemd+-CPU",
+        "value": 2.5,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "bash-CPU",
+        "value": 2.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "/usr/lib/systemd/systemd --switched-root --system --deserialize\u003d32-CPU",
+        "value": 1.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "[ksoftirqd/1]-CPU",
+        "value": 0.5,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "top-CPU",
+        "value": 0.5,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "[kthreadd]-CPU",
+        "value": 0.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "[rcu_gp]-CPU",
+        "value": 0.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "[rcu_par_gp]-CPU",
+        "value": 0.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      },
+      {
+        "name": "[slub_flushwq]-CPU",
+        "value": 0.0,
+        "unit": "Percent",
+        "time": 1774192696421
+      }
+    ]
+  },
+  "Instance-Disk-Used-/run/user/990": {
+    "name": "Instance-Disk-Used-/run/user/990",
+    "value": 1.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/run/user/990/systemd/generator.late",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990/systemd/units",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990/systemd/inaccessible/dir",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990/systemd/inaccessible",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990/systemd/generator.late/xdg-desktop-autostart.target.wants",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990/systemd",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990/pulse",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/user/990",
+        "value": 0.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Disk-Used-/run": {
+    "name": "Instance-Disk-Used-/run",
+    "value": 2.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/run/udev/data",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/tmpfiles.d",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/users",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/transient",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/sessions",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/seats",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/resolve",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/network/70-enX0.network.d",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/netif/links",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/run/systemd/netif/leases",
+        "value": 1.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Memory-MemFree": {
+    "name": "Instance-Memory-MemFree",
+    "value": 402.941,
+    "unit": "Megabytes",
+    "time": 1774192688244
+  },
+  "EMR-CPU": {
+    "name": "EMR-CPU",
+    "value": 0.5,
+    "unit": "Percent",
+    "time": 1774192696422
+  },
+  "Customer-Memory": {
+    "name": "Customer-Memory",
+    "value": 37.80000000000005,
+    "unit": "Percent",
+    "time": 1774192696422
+  },
+  "LogPusher-RunTime": {
+    "name": "LogPusher-RunTime",
+    "value": 267.0,
+    "unit": "Second",
+    "time": 1774192696421
+  },
+  "Instance-Disk-Used-/": {
+    "name": "Instance-Disk-Used-/",
+    "value": 60.0,
+    "unit": "Percent",
+    "time": 1774192463541,
+    "subMetrics": [
+      {
+        "name": "/usr/lib/hudi",
+        "value": 937.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/share/aws/aws-java-sdk-v2",
+        "value": 656.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/bin",
+        "value": 454.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/lib64",
+        "value": 422.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/share/aws/aws-java-sdk",
+        "value": 371.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/lib/spark/jars",
+        "value": 331.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/lib/locale",
+        "value": 214.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/lib/jvm/java-25-amazon-corretto.x86_64/lib",
+        "value": 206.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/lib/jvm/java-23-amazon-corretto.x86_64/lib",
+        "value": 205.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      },
+      {
+        "name": "/usr/lib/jvm/java-21-amazon-corretto.x86_64/lib",
+        "value": 203.0,
+        "unit": "Megabytes",
+        "time": 1774192463541
+      }
+    ]
+  },
+  "Instance-Disk-Used-/dev": {
+    "name": "Instance-Disk-Used-/dev",
+    "value": 0.0,
+    "unit": "Percent",
+    "time": 1774192463540
+  },
+  "InstanceController-Reboots": {
+    "name": "InstanceController-Reboots",
+    "value": 0.0,
+    "unit": "Count",
+    "time": 1774192456537
+  },
+  "IC-TimeSinceHeartbeat": {
+    "name": "IC-TimeSinceHeartbeat",
+    "value": 38.0,
+    "unit": "Seconds",
+    "time": 1774192696209
+  },
+  "Instance-CPU-CPUUtilization": {
+    "name": "Instance-CPU-CPUUtilization",
+    "value": 0.5,
+    "unit": "Percent",
+    "time": 1774192691215
+  }
+}
+
+# Resource Manager and Name Node details
+isMaster=$(grep isMaster /emr/instance-controller/lib/info/instance.json | grep true)
+isHACluster=$(grep haEnabled /emr/instance-controller/lib/info/extraInstanceData.json | grep true)
+if [ -n "$isMaster" ] && [ -n "$isHACluster" ]
+then
+  echo "============= Resource Manager status report ============="
+  sudo -u hadoop yarn rmadmin -getAllServiceState
+  echo "================ Name Node status report ================="
+  sudo -u hadoop hdfs haadmin -getAllServiceState
+fi
