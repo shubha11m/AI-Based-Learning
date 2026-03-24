@@ -1,0 +1,372 @@
+Ivy Default Cache set to: /home/hadoop/.ivy2/cache
+The jars for the packages stored in: /home/hadoop/.ivy2/jars
+org.apache.iceberg#iceberg-spark-runtime-3.3_2.12 added as a dependency
+org.apache.iceberg#iceberg-aws added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-63990fec-ff00-4bbc-b0c8-a22d88441f94;1.0
+	confs: [default]
+	found org.apache.iceberg#iceberg-spark-runtime-3.3_2.12;1.4.2 in central
+	found org.apache.iceberg#iceberg-aws;1.4.2 in central
+	found org.apache.iceberg#iceberg-api;1.4.2 in central
+	found org.slf4j#slf4j-api;1.7.36 in central
+	found org.apache.iceberg#iceberg-bundled-guava;1.4.2 in central
+	found org.apache.iceberg#iceberg-common;1.4.2 in central
+	found org.apache.iceberg#iceberg-core;1.4.2 in central
+	found org.apache.avro#avro;1.11.1 in central
+	found com.fasterxml.jackson.core#jackson-core;2.14.2 in central
+	found com.fasterxml.jackson.core#jackson-databind;2.14.2 in central
+	found com.fasterxml.jackson.core#jackson-annotations;2.14.2 in central
+	found org.apache.commons#commons-compress;1.21 in central
+	found io.airlift#aircompressor;0.25 in central
+	found org.apache.httpcomponents.client5#httpclient5;5.2.1 in central
+	found org.apache.httpcomponents.core5#httpcore5;5.2 in central
+	found org.apache.httpcomponents.core5#httpcore5-h2;5.2 in central
+	found com.github.ben-manes.caffeine#caffeine;2.9.3 in central
+	found org.checkerframework#checker-qual;3.19.0 in central
+	found com.google.errorprone#error_prone_annotations;2.10.0 in central
+	found org.roaringbitmap#RoaringBitmap;0.9.47 in central
+	found org.roaringbitmap#shims;0.9.47 in central
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.2/iceberg-spark-runtime-3.3_2.12-1.4.2.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-spark-runtime-3.3_2.12;1.4.2!iceberg-spark-runtime-3.3_2.12.jar (271ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-aws/1.4.2/iceberg-aws-1.4.2.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-aws;1.4.2!iceberg-aws.jar (132ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-api/1.4.2/iceberg-api-1.4.2.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-api;1.4.2!iceberg-api.jar (48ms)
+downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar ...
+	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.36!slf4j-api.jar (35ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-bundled-guava/1.4.2/iceberg-bundled-guava-1.4.2.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-bundled-guava;1.4.2!iceberg-bundled-guava.jar (46ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-common/1.4.2/iceberg-common-1.4.2.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-common;1.4.2!iceberg-common.jar (36ms)
+downloading https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-core/1.4.2/iceberg-core-1.4.2.jar ...
+	[SUCCESSFUL ] org.apache.iceberg#iceberg-core;1.4.2!iceberg-core.jar (48ms)
+downloading https://repo1.maven.org/maven2/com/github/ben-manes/caffeine/caffeine/2.9.3/caffeine-2.9.3.jar ...
+	[SUCCESSFUL ] com.github.ben-manes.caffeine#caffeine;2.9.3!caffeine.jar (39ms)
+downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar ...
+	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-databind;2.14.2!jackson-databind.jar(bundle) (41ms)
+downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar ...
+	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-core;2.14.2!jackson-core.jar(bundle) (34ms)
+downloading https://repo1.maven.org/maven2/org/apache/avro/avro/1.11.1/avro-1.11.1.jar ...
+	[SUCCESSFUL ] org.apache.avro#avro;1.11.1!avro.jar(bundle) (40ms)
+downloading https://repo1.maven.org/maven2/io/airlift/aircompressor/0.25/aircompressor-0.25.jar ...
+	[SUCCESSFUL ] io.airlift#aircompressor;0.25!aircompressor.jar (44ms)
+downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar ...
+	[SUCCESSFUL ] org.apache.httpcomponents.client5#httpclient5;5.2.1!httpclient5.jar (42ms)
+downloading https://repo1.maven.org/maven2/org/roaringbitmap/RoaringBitmap/0.9.47/RoaringBitmap-0.9.47.jar ...
+	[SUCCESSFUL ] org.roaringbitmap#RoaringBitmap;0.9.47!RoaringBitmap.jar (36ms)
+downloading https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar ...
+	[SUCCESSFUL ] org.apache.commons#commons-compress;1.21!commons-compress.jar (38ms)
+downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.jar ...
+	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-annotations;2.14.2!jackson-annotations.jar(bundle) (41ms)
+downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar ...
+	[SUCCESSFUL ] org.apache.httpcomponents.core5#httpcore5;5.2!httpcore5.jar (41ms)
+downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar ...
+	[SUCCESSFUL ] org.apache.httpcomponents.core5#httpcore5-h2;5.2!httpcore5-h2.jar (37ms)
+downloading https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.19.0/checker-qual-3.19.0.jar ...
+	[SUCCESSFUL ] org.checkerframework#checker-qual;3.19.0!checker-qual.jar (31ms)
+downloading https://repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.10.0/error_prone_annotations-2.10.0.jar ...
+	[SUCCESSFUL ] com.google.errorprone#error_prone_annotations;2.10.0!error_prone_annotations.jar (36ms)
+downloading https://repo1.maven.org/maven2/org/roaringbitmap/shims/0.9.47/shims-0.9.47.jar ...
+	[SUCCESSFUL ] org.roaringbitmap#shims;0.9.47!shims.jar (39ms)
+:: resolution report :: resolve 3655ms :: artifacts dl 1163ms
+	:: modules in use:
+	com.fasterxml.jackson.core#jackson-annotations;2.14.2 from central in [default]
+	com.fasterxml.jackson.core#jackson-core;2.14.2 from central in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.14.2 from central in [default]
+	com.github.ben-manes.caffeine#caffeine;2.9.3 from central in [default]
+	com.google.errorprone#error_prone_annotations;2.10.0 from central in [default]
+	io.airlift#aircompressor;0.25 from central in [default]
+	org.apache.avro#avro;1.11.1 from central in [default]
+	org.apache.commons#commons-compress;1.21 from central in [default]
+	org.apache.httpcomponents.client5#httpclient5;5.2.1 from central in [default]
+	org.apache.httpcomponents.core5#httpcore5;5.2 from central in [default]
+	org.apache.httpcomponents.core5#httpcore5-h2;5.2 from central in [default]
+	org.apache.iceberg#iceberg-api;1.4.2 from central in [default]
+	org.apache.iceberg#iceberg-aws;1.4.2 from central in [default]
+	org.apache.iceberg#iceberg-bundled-guava;1.4.2 from central in [default]
+	org.apache.iceberg#iceberg-common;1.4.2 from central in [default]
+	org.apache.iceberg#iceberg-core;1.4.2 from central in [default]
+	org.apache.iceberg#iceberg-spark-runtime-3.3_2.12;1.4.2 from central in [default]
+	org.checkerframework#checker-qual;3.19.0 from central in [default]
+	org.roaringbitmap#RoaringBitmap;0.9.47 from central in [default]
+	org.roaringbitmap#shims;0.9.47 from central in [default]
+	org.slf4j#slf4j-api;1.7.36 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   21  |   21  |   21  |   0   ||   21  |   21  |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-63990fec-ff00-4bbc-b0c8-a22d88441f94
+	confs: [default]
+	21 artifacts copied, 0 already retrieved (40187kB/22ms)
+26/03/24 06:56:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/03/24 06:56:28 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at ip-10-0-0-145.ec2.internal/10.0.0.145:8032
+26/03/24 06:56:28 INFO Configuration: resource-types.xml not found
+26/03/24 06:56:28 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/03/24 06:56:28 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (23424 MB per container)
+26/03/24 06:56:28 INFO Client: Will allocate AM container, with 2432 MB memory including 384 MB overhead
+26/03/24 06:56:28 INFO Client: Setting up container launch context for our AM
+26/03/24 06:56:28 INFO Client: Setting up the launch environment for our AM container
+26/03/24 06:56:28 INFO Client: PLATFORM_TYPE env variable found. Setting it in SparkConf spark.emr.platformType
+26/03/24 06:56:28 INFO Client: JOB_IDENTIFIER env variable found. Setting it in SparkConf spark.emr.jobId
+26/03/24 06:56:28 INFO Client: Preparing resources for our AM container
+26/03/24 06:56:28 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+26/03/24 06:56:32 INFO Client: Uploading resource file:/mnt/tmp/spark-e9895559-8c48-4245-8fb3-b55291b00e3f/__spark_libs__7095187902747056990.zip -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/__spark_libs__7095187902747056990.zip
+26/03/24 06:56:33 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.3_2.12-1.4.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.iceberg_iceberg-spark-runtime-3.3_2.12-1.4.2.jar
+26/03/24 06:56:33 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-aws-1.4.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.iceberg_iceberg-aws-1.4.2.jar
+26/03/24 06:56:33 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-api-1.4.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.iceberg_iceberg-api-1.4.2.jar
+26/03/24 06:56:34 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-1.7.36.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.slf4j_slf4j-api-1.7.36.jar
+26/03/24 06:56:34 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-bundled-guava-1.4.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.iceberg_iceberg-bundled-guava-1.4.2.jar
+26/03/24 06:56:35 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-common-1.4.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.iceberg_iceberg-common-1.4.2.jar
+26/03/24 06:56:35 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-core-1.4.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.iceberg_iceberg-core-1.4.2.jar
+26/03/24 06:56:35 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/com.github.ben-manes.caffeine_caffeine-2.9.3.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/com.github.ben-manes.caffeine_caffeine-2.9.3.jar
+26/03/24 06:56:36 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.14.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/com.fasterxml.jackson.core_jackson-databind-2.14.2.jar
+26/03/24 06:56:36 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.14.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/com.fasterxml.jackson.core_jackson-core-2.14.2.jar
+26/03/24 06:56:36 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.avro_avro-1.11.1.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.avro_avro-1.11.1.jar
+26/03/24 06:56:37 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/io.airlift_aircompressor-0.25.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/io.airlift_aircompressor-0.25.jar
+26/03/24 06:56:37 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.httpcomponents.client5_httpclient5-5.2.1.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.httpcomponents.client5_httpclient5-5.2.1.jar
+26/03/24 06:56:38 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.roaringbitmap_RoaringBitmap-0.9.47.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.roaringbitmap_RoaringBitmap-0.9.47.jar
+26/03/24 06:56:38 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.commons_commons-compress-1.21.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.commons_commons-compress-1.21.jar
+26/03/24 06:56:38 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.14.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/com.fasterxml.jackson.core_jackson-annotations-2.14.2.jar
+26/03/24 06:56:39 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.httpcomponents.core5_httpcore5-5.2.jar
+26/03/24 06:56:39 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.apache.httpcomponents.core5_httpcore5-h2-5.2.jar
+26/03/24 06:56:40 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.19.0.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.checkerframework_checker-qual-3.19.0.jar
+26/03/24 06:56:40 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/com.google.errorprone_error_prone_annotations-2.10.0.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/com.google.errorprone_error_prone_annotations-2.10.0.jar
+26/03/24 06:56:41 INFO Client: Uploading resource file:/home/hadoop/.ivy2/jars/org.roaringbitmap_shims-0.9.47.jar -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/org.roaringbitmap_shims-0.9.47.jar
+26/03/24 06:56:41 INFO Client: Uploading resource file:/etc/hudi/conf.dist/hudi-defaults.conf -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/hudi-defaults.conf
+26/03/24 06:56:41 INFO EMRFSToS3AConfigMapping: Mapping EMRFS config fs.s3.sts.endpoint to S3A config fs.s3a.assumed.role.sts.endpoint
+26/03/24 06:56:41 INFO EMRFSToS3AConfigMapping: Mapping EMRFS config fs.s3.buffer.dir to S3A config fs.s3a.buffer.dir
+26/03/24 06:56:41 INFO MetricsConfig: Loaded properties from hadoop-metrics2.properties
+26/03/24 06:56:41 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 300 second(s).
+26/03/24 06:56:41 INFO MetricsSystemImpl: s3a-file-system metrics system started
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+26/03/24 06:56:42 INFO Client: Uploading resource s3://nontrauma-analytics-dev/script/update_script.py -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/update_script.py
+26/03/24 06:56:43 INFO Client: Uploading resource file:/usr/lib/spark/python/lib/pyspark.zip -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/pyspark.zip
+26/03/24 06:56:43 INFO Client: Uploading resource file:/usr/lib/spark/python/lib/py4j-0.10.9.7-src.zip -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/py4j-0.10.9.7-src.zip
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.3_2.12-1.4.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-aws-1.4.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-api-1.4.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.slf4j_slf4j-api-1.7.36.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-bundled-guava-1.4.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-common-1.4.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.iceberg_iceberg-core-1.4.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/com.github.ben-manes.caffeine_caffeine-2.9.3.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.14.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.14.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.avro_avro-1.11.1.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/io.airlift_aircompressor-0.25.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.httpcomponents.client5_httpclient5-5.2.1.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.roaringbitmap_RoaringBitmap-0.9.47.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.commons_commons-compress-1.21.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.14.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.checkerframework_checker-qual-3.19.0.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/com.google.errorprone_error_prone_annotations-2.10.0.jar added multiple times to distributed cache.
+26/03/24 06:56:43 WARN Client: Same path resource file:///home/hadoop/.ivy2/jars/org.roaringbitmap_shims-0.9.47.jar added multiple times to distributed cache.
+26/03/24 06:56:43 INFO Client: Uploading resource file:/mnt/tmp/spark-e9895559-8c48-4245-8fb3-b55291b00e3f/__spark_conf__1285568926198079632.zip -> hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001/__spark_conf__.zip
+26/03/24 06:56:43 INFO SecurityManager: Changing view acls to: hadoop
+26/03/24 06:56:43 INFO SecurityManager: Changing modify acls to: hadoop
+26/03/24 06:56:43 INFO SecurityManager: Changing view acls groups to: 
+26/03/24 06:56:43 INFO SecurityManager: Changing modify acls groups to: 
+26/03/24 06:56:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hadoop; groups with view permissions: EMPTY; users with modify permissions: hadoop; groups with modify permissions: EMPTY
+26/03/24 06:56:43 INFO Client: Submitting application application_1774335265559_0001 to ResourceManager
+26/03/24 06:56:44 INFO YarnClientImpl: Submitted application application_1774335265559_0001
+26/03/24 06:56:45 INFO Client: Application report for application_1774335265559_0001 (state: ACCEPTED)
+26/03/24 06:56:45 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1774335403815
+	 final status: UNDEFINED
+	 tracking URL: http://ip-10-0-0-145.ec2.internal:20888/proxy/application_1774335265559_0001/
+	 user: hadoop
+26/03/24 06:56:54 INFO Client: Application report for application_1774335265559_0001 (state: FAILED)
+26/03/24 06:56:54 INFO Client: 
+	 client token: N/A
+	 diagnostics: Application application_1774335265559_0001 failed 2 times due to AM Container for appattempt_1774335265559_0001_000002 exited with  exitCode: 13
+Failing this attempt.Diagnostics: [2026-03-24 06:56:53.895]Exception from container-launch.
+Container id: container_1774335265559_0001_02_000001
+Exit code: 13
+
+[2026-03-24 06:56:53.910]Container exited with a non-zero exit code 13. Error file: prelaunch.err.
+Last 4096 bytes of prelaunch.err :
+Last 4096 bytes of stderr :
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for TERM
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for HUP
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for INT
+26/03/24 06:56:53 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1774335265559_0001_000002
+26/03/24 06:56:53 INFO ApplicationMaster: Starting the user application in a separate Thread
+26/03/24 06:56:53 INFO ApplicationMaster: Waiting for spark context initialization...
+26/03/24 06:56:53 ERROR ApplicationMaster: User application exited with status 1
+26/03/24 06:56:53 INFO ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User application exited with status 1)
+26/03/24 06:56:53 ERROR ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56) ~[spark-common-utils_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:528) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:270) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:973) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:972) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at java.security.AccessController.doPrivileged(AccessController.java:712) [?:?]
+	at javax.security.auth.Subject.doAs(Subject.java:439) [?:?]
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1953) [hadoop-client-api-3.4.1-amzn-4.jar:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:972) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+Caused by: org.apache.spark.SparkUserAppException: User application exited with 1
+	at org.apache.spark.deploy.PythonRunner$.main(PythonRunner.scala:112) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.PythonRunner.main(PythonRunner.scala) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:777) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+26/03/24 06:56:53 INFO ApplicationMaster: Deleting staging directory hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001
+26/03/24 06:56:53 INFO ShutdownHookManager: Shutdown hook called
+
+
+[2026-03-24 06:56:53.911]Container exited with a non-zero exit code 13. Error file: prelaunch.err.
+Last 4096 bytes of prelaunch.err :
+Last 4096 bytes of stderr :
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for TERM
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for HUP
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for INT
+26/03/24 06:56:53 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1774335265559_0001_000002
+26/03/24 06:56:53 INFO ApplicationMaster: Starting the user application in a separate Thread
+26/03/24 06:56:53 INFO ApplicationMaster: Waiting for spark context initialization...
+26/03/24 06:56:53 ERROR ApplicationMaster: User application exited with status 1
+26/03/24 06:56:53 INFO ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User application exited with status 1)
+26/03/24 06:56:53 ERROR ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56) ~[spark-common-utils_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:528) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:270) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:973) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:972) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at java.security.AccessController.doPrivileged(AccessController.java:712) [?:?]
+	at javax.security.auth.Subject.doAs(Subject.java:439) [?:?]
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1953) [hadoop-client-api-3.4.1-amzn-4.jar:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:972) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+Caused by: org.apache.spark.SparkUserAppException: User application exited with 1
+	at org.apache.spark.deploy.PythonRunner$.main(PythonRunner.scala:112) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.PythonRunner.main(PythonRunner.scala) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:777) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+26/03/24 06:56:53 INFO ApplicationMaster: Deleting staging directory hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001
+26/03/24 06:56:53 INFO ShutdownHookManager: Shutdown hook called
+
+
+For more detailed output, check the application tracking page: http://ip-10-0-0-145.ec2.internal:8088/cluster/app/application_1774335265559_0001 Then click on links to logs of each attempt.
+. Failing the application.
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1774335403815
+	 final status: FAILED
+	 tracking URL: http://ip-10-0-0-145.ec2.internal:8088/cluster/app/application_1774335265559_0001
+	 user: hadoop
+26/03/24 06:56:54 ERROR Client: Application diagnostics message: Application application_1774335265559_0001 failed 2 times due to AM Container for appattempt_1774335265559_0001_000002 exited with  exitCode: 13
+Failing this attempt.Diagnostics: [2026-03-24 06:56:53.895]Exception from container-launch.
+Container id: container_1774335265559_0001_02_000001
+Exit code: 13
+
+[2026-03-24 06:56:53.910]Container exited with a non-zero exit code 13. Error file: prelaunch.err.
+Last 4096 bytes of prelaunch.err :
+Last 4096 bytes of stderr :
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for TERM
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for HUP
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for INT
+26/03/24 06:56:53 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1774335265559_0001_000002
+26/03/24 06:56:53 INFO ApplicationMaster: Starting the user application in a separate Thread
+26/03/24 06:56:53 INFO ApplicationMaster: Waiting for spark context initialization...
+26/03/24 06:56:53 ERROR ApplicationMaster: User application exited with status 1
+26/03/24 06:56:53 INFO ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User application exited with status 1)
+26/03/24 06:56:53 ERROR ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56) ~[spark-common-utils_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:528) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:270) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:973) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:972) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at java.security.AccessController.doPrivileged(AccessController.java:712) [?:?]
+	at javax.security.auth.Subject.doAs(Subject.java:439) [?:?]
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1953) [hadoop-client-api-3.4.1-amzn-4.jar:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:972) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+Caused by: org.apache.spark.SparkUserAppException: User application exited with 1
+	at org.apache.spark.deploy.PythonRunner$.main(PythonRunner.scala:112) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.PythonRunner.main(PythonRunner.scala) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:777) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+26/03/24 06:56:53 INFO ApplicationMaster: Deleting staging directory hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001
+26/03/24 06:56:53 INFO ShutdownHookManager: Shutdown hook called
+
+
+[2026-03-24 06:56:53.911]Container exited with a non-zero exit code 13. Error file: prelaunch.err.
+Last 4096 bytes of prelaunch.err :
+Last 4096 bytes of stderr :
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for TERM
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for HUP
+26/03/24 06:56:52 INFO SignalUtils: Registering signal handler for INT
+26/03/24 06:56:53 INFO ApplicationMaster: ApplicationAttemptId: appattempt_1774335265559_0001_000002
+26/03/24 06:56:53 INFO ApplicationMaster: Starting the user application in a separate Thread
+26/03/24 06:56:53 INFO ApplicationMaster: Waiting for spark context initialization...
+26/03/24 06:56:53 ERROR ApplicationMaster: User application exited with status 1
+26/03/24 06:56:53 INFO ApplicationMaster: Final app status: FAILED, exitCode: 13, (reason: User application exited with status 1)
+26/03/24 06:56:53 ERROR ApplicationMaster: Uncaught exception: 
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:56) ~[spark-common-utils_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:310) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.runDriver(ApplicationMaster.scala:528) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.run(ApplicationMaster.scala:270) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:973) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$3.run(ApplicationMaster.scala:972) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at java.security.AccessController.doPrivileged(AccessController.java:712) [?:?]
+	at javax.security.auth.Subject.doAs(Subject.java:439) [?:?]
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1953) [hadoop-client-api-3.4.1-amzn-4.jar:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$.main(ApplicationMaster.scala:972) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.yarn.ApplicationMaster.main(ApplicationMaster.scala) [spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+Caused by: org.apache.spark.SparkUserAppException: User application exited with 1
+	at org.apache.spark.deploy.PythonRunner$.main(PythonRunner.scala:112) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at org.apache.spark.deploy.PythonRunner.main(PythonRunner.scala) ~[spark-core_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.apache.spark.deploy.yarn.ApplicationMaster$$anon$2.run(ApplicationMaster.scala:777) ~[spark-yarn_2.12-3.5.6-amzn-1.jar:3.5.6-amzn-1]
+26/03/24 06:56:53 INFO ApplicationMaster: Deleting staging directory hdfs://ip-10-0-0-145.ec2.internal:8020/user/hadoop/.sparkStaging/application_1774335265559_0001
+26/03/24 06:56:53 INFO ShutdownHookManager: Shutdown hook called
+
+
+For more detailed output, check the application tracking page: http://ip-10-0-0-145.ec2.internal:8088/cluster/app/application_1774335265559_0001 Then click on links to logs of each attempt.
+. Failing the application.
+Exception in thread "main" org.apache.spark.SparkException: Application application_1774335265559_0001 finished with failed status
+	at org.apache.spark.deploy.yarn.Client.run(Client.scala:1418)
+	at org.apache.spark.deploy.yarn.YarnClusterApplication.start(Client.scala:1851)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1150)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:200)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:223)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:92)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1246)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1255)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+26/03/24 06:56:54 INFO ShutdownHookManager: Shutdown hook called
+26/03/24 06:56:54 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-e9895559-8c48-4245-8fb3-b55291b00e3f
+26/03/24 06:56:54 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-1c62a53d-d1d5-4287-8ffb-a80e6bebc372
+26/03/24 06:56:54 INFO MetricsSystemImpl: Stopping s3a-file-system metrics system...
+26/03/24 06:56:54 INFO MetricsSystemImpl: s3a-file-system metrics system stopped.
+26/03/24 06:56:54 INFO MetricsSystemImpl: s3a-file-system metrics system shutdown complete.
+Command exiting with ret '1'
